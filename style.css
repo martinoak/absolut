@@ -1,0 +1,61 @@
+body {
+    font-family: sans-serif;
+    background-color: #DEDEDE;
+    color: #333;
+    padding: 20px 0 28px 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.collection {
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.3rem;
+}
+
+.showcase {
+    max-width: 880px;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: #FFF;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
+    overflow: hidden;
+}
+
+.showcase p {
+    font-size: 0.9rem;
+    text-align: left;
+    margin-top: 50px;
+}
+
+.showcase ul li {
+    padding-bottom: 5px;
+}
+
+.bottle-photo {
+    float: left;
+    width: 30%;
+    margin-right: 15px;
+}
+
+.bottle-name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.filter {
+    font-size: .9rem;
+    color: #888;
+    vertical-align: middle;
+}
+
+.footer {
+    font-size: .7rem;
+    color: #888;
+    text-align: center;
+    margin: 0;
+}

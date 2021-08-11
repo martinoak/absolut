@@ -1,2 +1,1 @@
-# absolut-vodka-collection
-My humble collection of Absolut vodka collection to have an oversight
+<a><img src="https://raw.githubusercontent.com/MarvelousMartin/absolut-vodka-collection/master/assets/logo.png">

@@ -487,11 +487,13 @@ function bottleTemplate(bottle) {
 }
 
 document.getElementById("collection").innerHTML = `
+${bottleData.map(bottleTemplate).join('')}
+`
+
+document.getElementById("title").innerHTML = `
 <div style="width: 100%; text-align: center" class="mb-4">
     <h1>Collection of ${bottleData.length} bottles</h1>
 </div>
-<br />
-${bottleData.map(bottleTemplate).join('')}
 `
 
 /*

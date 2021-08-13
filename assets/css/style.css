@@ -1,5 +1,11 @@
+@font-face {
+    font-family: 'Absolut';
+    src:  url('../fonts/absolut-headline.ttf') format('truetype'),
+          url('../fonts/absolut-headline.woff') format('woff');
+}
+
 body {
-    font-family: sans-serif;
+    font-family: Absolut, sans-serif;
     background-color: #DEDEDE;
     color: #333;
     padding: 20px 0 28px 0;

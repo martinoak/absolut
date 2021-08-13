@@ -57,7 +57,7 @@ const bottleData = [
         "numberOfBottles": "2 432 242",
         "designer": "NaN",
         "description": "Blue tinted bottle with two bottle silhouette color versions (pink and mint) with word  'love' printed in 16 different languages on the bottle. Medallion features a white \"bleeding heart\" at the center.",
-        "frontPhoto": "assets/absolut-vodka-a-drop-of-love_white.jpg"
+        "frontPhoto": "assets/images/absolut-vodka-a-drop-of-love_white.jpg"
     },
     {
         "name": "Absolut Drop of Love (mint) 700ml",
@@ -67,7 +67,7 @@ const bottleData = [
         "numberOfBottles": "2 432 242",
         "designer": "NaN",
         "description": "Blue tinted bottle with two bottle silhouette color versions (pink and mint) with word  'love' printed in 16 different languages on the bottle. Special Pride medallion with rainbow colored heart.",
-        "frontPhoto": "assets/absolut-vodka-a-drop-of-love_pride.jpg"
+        "frontPhoto": "assets/images/absolut-vodka-a-drop-of-love_pride.jpg"
     },
     {
         "name": "Absolut Electrik Blue",
@@ -135,7 +135,7 @@ const bottleData = [
         "numberOfBottles": "Core release",
         "designer": "NaN",
         "description": "Flavored fruit juice 35% -abv. Contains natural ingredients and has a paper label with a suggestion that it is an autumn flavor",
-        "frontPhoto": "assets/absolut-juice-apple.jpg"
+        "frontPhoto": "assets/images/absolut-juice-apple.jpg"
     },
     {
         "name": "Absolut Karnival 1l",
@@ -205,7 +205,7 @@ const bottleData = [
         "numberOfBottles": "36 000",
         "designer": "James Ostrer",
         "description": "Inspired by the six colors of the LGBT Pride flag, the design’s semi-transparent triangles allow the bottle’s colors to overlap in distinct ways when viewed from different angles.",
-        "frontPhoto": "assets/absolut-vodka-mix-khuli-chana-signature-edition-750ml-43-vol.jpg"
+        "frontPhoto": "assets/images/absolut-vodka-mix-khuli-chana-signature-edition-750ml-43-vol.jpg"
     },
     {
         "name": "Absolut New Orleans",
@@ -245,7 +245,7 @@ const bottleData = [
         "numberOfBottles": "9 996",
         "designer": "NaN",
         "description": "Featuring Khuli Chana with a hood and fire breathing as The Dragon. The One Source campaign in partnership with Absolut began with the release of an album and video in 2016 featuring Khuli Chana, Sarkodie (Ghana), Victoria Kimani (Kenya) and other African artists. A One Source Live (OSL) concert was held in Johannesburg on 24 March 2018.",
-        "frontPhoto": "assets/onesource_thedragon.jpg"
+        "frontPhoto": "assets/images/onesource_thedragon.jpg"
     },
     {
         "name": "Absolut Originality",
@@ -275,7 +275,7 @@ const bottleData = [
         "numberOfBottles": "Core release",
         "designer": "NaN",
         "description": "Bold graphic design in green and yellow brushstrokes with swirls of purple. ABSOLUT PASSIONFRUIT in bold yellow color.",
-        "frontPhoto": "assets/absolut-passionfruit.jpg"
+        "frontPhoto": "assets/images/absolut-passionfruit.jpg"
     },
     {
         "name": "Absolut Pears",
@@ -307,7 +307,7 @@ const bottleData = [
         "numberOfBottles": "10 000",
         "designer": "Pond Design",
         "description": "Exclusive for the Vienna \"Life-Ball\". A rainbow bottle edition with pink ribbon impossed on the mediallion",
-        "frontPhoto": "assets/absolut-life-ball-edition-700ml-40-vol.jpg"
+        "frontPhoto": "assets/images/absolut-life-ball-edition-700ml-40-vol.jpg"
     },
     {
         "name": "Absolut Raspberri V3",
@@ -341,7 +341,7 @@ const bottleData = [
         "numberOfBottles": "Core release",
         "designer": "NaN",
         "description": "Absolut Ruby Red is made exclusively from natural ingredients, and unlike some other flavored vodkas, it doesn’t contain any added sugar. Absolut Ruby Red is smooth and fruity with a crisp and refreshing character of zesty grapefruit.",
-        "frontPhoto": "assets/absolut-ruby-red-1000ml-40-vol.jpg"
+        "frontPhoto": "assets/images/absolut-ruby-red-1000ml-40-vol.jpg"
     },
     {
         "name": "Absolut Soy Capaz De",
@@ -362,7 +362,7 @@ const bottleData = [
         "numberOfBottles": "35 000",
         "designer": "NaN",
         "description": "Pink/Rose bag bottom to Blue top enhanced by butterflies",
-        "frontPhoto": "assets/absolut-tomorrowland-old.jpg"
+        "frontPhoto": "assets/images/absolut-tomorrowland-old.jpg"
     },
     {
         "name": "Absolut Tomorrowland",
@@ -372,7 +372,7 @@ const bottleData = [
         "numberOfBottles": "Unknown amount of",
         "designer": "NaN",
         "description": "Issued for the Tomorrowland ZUM Festival featuring the words LIVE LOVE UNITE in pink and blue colors with butterflies and flowers",
-        "frontPhoto": "assets/absolut-tomorrowland-new.jpg"
+        "frontPhoto": "assets/images/absolut-tomorrowland-new.jpg"
     },
     {
         "name": "Absolut Unity",
@@ -382,7 +382,7 @@ const bottleData = [
         "numberOfBottles": "Unknown amount of",
         "designer": "NaN",
         "description": "Designed in red and white stripes and blue rectangle resembling the American Flag and in collaboration with the nonprofit Keep America Beautiful, the bottle represents unity",
-        "frontPhoto": "assets/absolut-unity-700ml-40-vol.jpg"
+        "frontPhoto": "assets/images/absolut-unity-700ml-40-vol.jpg"
     },
     {
         "name": "Absolut Unique",

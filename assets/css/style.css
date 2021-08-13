@@ -28,15 +28,6 @@ img {
     margin: 0.5rem;
 }
 
-.showcase {
-    max-width: 880px;
-    padding: 20px;
-    margin: 30px auto;
-    background-color: #FFF;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
-    overflow: hidden;
-}
-
 .showcase p {
     font-size: 0.9rem;
     text-align: left;

@@ -447,26 +447,28 @@ const bottleData = [
     },
 ];
 
+function openModal(id) {
+    $(id).on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
+}
+
 function bottleTemplate(bottle) {
     return `
         <div class="col-lg-1 d-block m-auto mb-4 mb-lg-0">
-            <img
+            <a data-toggle="modal" data-target="#${bottle.name.replace(/\W/g,'_')}" role="button" onclick="openModal(${bottle.name.replace(/\W/g,'_')})">
+                <img
                 src="${bottle.frontPhoto}"
                 class="shadow-1-strong galleryPreview"
-                data-target="#carouselExample" data-slide-to="0"
-            />
+                alt=""
+                />
+            </a>
         </div>
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal fade bd-example-modal-lg" id="${bottle.name.replace(/\W/g,'_')}" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
                     <div class="modal-body">
-                        <div class="showcase">
-                            <img class="bottle-photo" src="${bottle.frontPhoto}">
+                        <img class="bottle-photo" src="${bottle.frontPhoto}" alt="">
                             <h2 class="bottle-name">${bottle.name}<br /><span class="filter">${bottle.filter}</span></h2>
                             <ul style="text-align: left;font-size: 0.9rem">
                                 <li><strong>${bottle.since}</strong></li>
@@ -475,10 +477,6 @@ function bottleTemplate(bottle) {
                                 <li><strong>Distributed in:</strong> ${bottle.distribution}</li>
                             </ul>
                             <p>${bottle.description}</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -492,7 +490,7 @@ ${bottleData.map(bottleTemplate).join('')}
 
 document.getElementById("title").innerHTML = `
 <div class="mb-4 w-100 title">
-    <h1>Collection of ${bottleData.length} bottles</h1>
+    <h1>My collection of ${bottleData.length} bottles</h1>
 </div>
 `
 

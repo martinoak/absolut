@@ -29,13 +29,13 @@ img {
 }
 
 .showcase p {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     text-align: left;
     margin-top: 50px;
 }
 
 .showcase ul li {
-    padding-bottom: 5px;
+    padding-left: 25px;
 }
 
 .bottle-photo {
@@ -47,6 +47,13 @@ img {
 .bottle-name {
     font-size: 2rem;
     font-weight: bold;
+    text-align: center;
+}
+
+.description {
+    margin-top: 50px;
+    padding-left: 40px;
+    max-width: 740px;
 }
 
 .filter {

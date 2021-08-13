@@ -33,7 +33,7 @@ const bottleData = [
         "name": "Absolut Blank Kinsey",
         "filter": "Limited Edition Bottle",
         "since": 2013,
-        "distribution": "Italy, Germany, Greece, Austria, Spain, Belgium, Luxemburg, & Switzerland",
+        "distribution": "Europe countries",
         "numberOfBottles": "Unknown amount of",
         "designer": "Dave Kinsey",
         "description": "Absolut Vodka Blank Edition by Dave Kinsey features an explosion of bright colors and darker-hued washes that reveal Kinsey’s roots as a street artist while highlighting his extraordinary fine art skill. It depicts something natural, a flower with the vibrancy and energy of the city.",
@@ -464,19 +464,23 @@ function bottleTemplate(bottle) {
                 />
             </a>
         </div>
-        <div class="modal fade bd-example-modal-lg" id="${bottle.name.replace(/\W/g,'_')}" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+        <div class="modal fade" id="${bottle.name.replace(/\W/g,'_')}" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <img class="bottle-photo" src="${bottle.frontPhoto}" alt="">
-                            <h2 class="bottle-name">${bottle.name}<br /><span class="filter">${bottle.filter}</span></h2>
-                            <ul style="text-align: left;font-size: 0.9rem">
-                                <li><strong>${bottle.since}</strong></li>
-                                <li><strong>${bottle.numberOfBottles} bottles</strong></li>
-                                <li><strong>Designer:</strong> ${bottle.designer}</li>
-                                <li><strong>Distributed in:</strong> ${bottle.distribution}</li>
-                            </ul>
-                            <p>${bottle.description}</p>
+                        <h2 class="bottle-name">${bottle.name}<br /><span class="filter">${bottle.filter}</span></h2>
+                        <div class="row d-flex align-self-center">
+                            <img class="bottle-photo" src="${bottle.frontPhoto}" alt="">
+                            <div>
+                                <ul style="text-align: left;font-size: 1.3rem">
+                                    <li style="list-style-image: url(/assets/images/svg/calendar-fill.svg)"><strong>${bottle.since}</strong></li>
+                                    <li style="list-style-image: url(/assets/images/svg/hand-thumbs-up-fill.svg)"><strong>${bottle.numberOfBottles} bottles</strong></li>
+                                    <li style="list-style-image: url(/assets/images/svg/brush-fill.svg)"><strong>Designer:</strong> ${bottle.designer}</li>
+                                    <li style="list-style-image: url(/assets/images/svg/geo-fill.svg)"><strong>Distributed in:</strong> ${bottle.distribution}</li>
+                                </ul>
+                                <p class="description">${bottle.description}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

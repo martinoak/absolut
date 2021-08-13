@@ -491,7 +491,7 @@ ${bottleData.map(bottleTemplate).join('')}
 `
 
 document.getElementById("title").innerHTML = `
-<div style="width: 100%; text-align: center" class="mb-4">
+<div class="mb-4 w-100 title">
     <h1>Collection of ${bottleData.length} bottles</h1>
 </div>
 `

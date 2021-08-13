@@ -17,6 +17,11 @@ img {
     font-size: 1.3rem;
 }
 
+.galleryPreview {
+    width: 100%;
+    margin: 0.5rem;
+}
+
 .showcase {
     max-width: 880px;
     padding: 20px;
@@ -54,7 +59,7 @@ img {
 }
 
 .footer {
-    font-size: .7rem;
+    font-size: .9rem;
     color: #888;
     text-align: center;
     margin: 0;

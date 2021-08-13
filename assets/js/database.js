@@ -424,32 +424,47 @@ const bottleData = [
 
 function bottleTemplate(bottle) {
     return `
-    <div class="showcase">
-        <img class="bottle-photo" src="${bottle.frontPhoto}">
-        <h2 class="bottle-name">${bottle.name}<br /><span class="filter">${bottle.filter}</span></h2>
-        <ul style="text-align: left;font-size: 0.9rem">
-            <li><strong>${bottle.since}</strong></li>
-            <li><strong>${bottle.numberOfBottles} bottles</strong></li>
-            <li><strong>Designer:</strong> ${bottle.designer}</li>
-            <li><strong>Distributed in:</strong> ${bottle.distribution}</li>
-        </ul>
-        <p>${bottle.description}</p>
-    </div>
+        <div class="col-lg-1 d-block m-auto mb-4 mb-lg-0">
+            <img
+                src="${bottle.frontPhoto}"
+                class="shadow-1-strong galleryPreview"
+                data-target="#carouselExample" data-slide-to="0"
+            />
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="showcase">
+                            <img class="bottle-photo" src="${bottle.frontPhoto}">
+                            <h2 class="bottle-name">${bottle.name}<br /><span class="filter">${bottle.filter}</span></h2>
+                            <ul style="text-align: left;font-size: 0.9rem">
+                                <li><strong>${bottle.since}</strong></li>
+                                <li><strong>${bottle.numberOfBottles} bottles</strong></li>
+                                <li><strong>Designer:</strong> ${bottle.designer}</li>
+                                <li><strong>Distributed in:</strong> ${bottle.distribution}</li>
+                            </ul>
+                            <p>${bottle.description}</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     `
 }
 
 document.getElementById("collection").innerHTML = `
-<div style="max-width: 50%; text-align: center; margin: auto">
-    <h1>Collection of ${bottleData.length} bottles
-        <span style="float: right">
-            <lord-icon
-            src="https://cdn.lordicon.com/fgkmrslx.json"
-            trigger="morph"
-            colors="primary:#000000,secondary:#1663c7"
-            style="width:50px;height:50px">
-            </lord-icon>
-        </span>
-    </h1>
+<div style="width: 100%; text-align: center" class="mb-4">
+    <h1>Collection of ${bottleData.length} bottles</h1>
 </div>
+<br />
 ${bottleData.map(bottleTemplate).join('')}
 `

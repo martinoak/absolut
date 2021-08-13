@@ -70,6 +70,16 @@ const bottleData = [
         "frontPhoto": "assets/images/absolut-vodka-a-drop-of-love_pride.jpg"
     },
     {
+        "name": "Absolut Dubai",
+        "filter": "Limited Edition Bag",
+        "since": 2019,
+        "distribution": "United Arab Emirates",
+        "numberOfBottles": "Unknown amount of",
+        "designer": "Randy Constantino",
+        "description": "Medium blue bag depicting the city skyline with a bright orange sun rising above it",
+        "frontPhoto": "assets/images/absolut-dubai.jpg"
+    },
+    {
         "name": "Absolut Electrik Blue",
         "filter": "Limited Edition Bottle",
         "since": 2015,
@@ -128,6 +138,16 @@ const bottleData = [
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/01/absolut_greensaver__0000.jpg"
     },
     {
+        "name": "Absolut Istanbul Bag",
+        "filter": "Limited Edition Bag",
+        "since": 2012,
+        "distribution": "Turkey",
+        "numberOfBottles": "Unknown amount of",
+        "designer": "Unknown",
+        "description": "N/A",
+        "frontPhoto": "assets/images/absolut-istanbul-bag.jpg"
+    },
+    {
         "name": "Absolut Juice Apple",
         "filter": "Flavors & Premium",
         "since": 2018,
@@ -174,6 +194,21 @@ const bottleData = [
         "designer": "NaN",
         "description": "Absolut Mango is made exclusively from natural ingredients, and unlike some other flavored vodkas, it doesn’t contain any added sugar. Absolut Mango is full-bodied and juicy with a character of ripe mango and notes of tropical fruits.",
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2017/01/absolut_mango_2016__0000.jpg"
+    },
+    {
+        "name": "Absolut Masquerade",
+        "filter": "Limited Edition Bag",
+        "since": 2008,
+        "distribution": "Worldwide",
+        "numberOfBottles": "3 100 000",
+        "designer": "NaN",
+        "description": "The Masquerade skin is the 2008 end-of-the-year edition.<br><br>\n" +
+            "\n" +
+            "Shiny red skin containing a regular blue bottle.<br><br>\n" +
+            "\n" +
+            "Made from soft and shiny red spangles, and with a zipper on the back, Absolut Masquerade really stands out and inspires consumers to join the glamorous masquerade.<br><br>" +
+            "The one-liter gift pack is built of exactly 3,238 shiny red spangles in the shape of a classic Absolut bottle, serving as an ultra-stylish package.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/02/absolut_masquerade__0000.jpg"
     },
     {
         "name": "Absolut Miami 750ml",
@@ -410,16 +445,6 @@ const bottleData = [
             "The extravagant and glamorous decor of the unique limited edition ABSOLUT WATKINS bottle was created by celebrated Swedish fashion illustrator and artist, Liselotte Watkins, famous for her designs for fashion brands such as Miu Miu, Anna Sui and Barney’s as well as for magazines such as VOGUE and The New Yorker.",
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/01/absolut_watkins__0000.jpg"
     },
-    {
-        "name": "",
-        "filter": "",
-        "since": 0,
-        "distribution": "",
-        "numberOfBottles": "",
-        "designer": "",
-        "description": "",
-        "frontPhoto": ""
-    }
 ];
 
 function bottleTemplate(bottle) {
@@ -468,3 +493,16 @@ document.getElementById("collection").innerHTML = `
 <br />
 ${bottleData.map(bottleTemplate).join('')}
 `
+
+/*
+{
+    "name": "",
+    "filter": "",
+    "since": 0,
+    "distribution": "",
+    "numberOfBottles": "",
+    "designer": "",
+    "description": "",
+    "frontPhoto": ""
+}
+*/

@@ -481,12 +481,12 @@ function bottleTemplate(bottle) {
         <div class="modal fade" id="${bottle.name.replace(/\W/g,'_')}" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
-                    <div class="modal-body" style="font-size: 1.4rem">
+                    <div class="modal-body">
                         <h2 class="bottle-name">${bottle.name}<br /><span class="filter">${bottle.filter}</span></h2>
                         <div class="row d-flex align-self-center">
                             <img class="bottle-photo" src="${bottle.frontPhoto}" alt="">
                             <div class="ul-list">
-                                <ul style="text-align: left;font-size: 1.8rem">
+                                <ul>
                                     <li style="list-style-image: url(/assets/images/svg/calendar-event.svg)"><strong>${bottle.since}</strong></a></li>
                                     <li style="list-style-image: url(/assets/images/svg/collection.svg)"><a><strong>${bottle.numberOfBottles} bottles</strong></a></li>
                                     <li style="list-style-image: url(/assets/images/svg/brush.svg)"><a>${bottle.designer}</a></li>

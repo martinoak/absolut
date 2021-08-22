@@ -26,25 +26,20 @@ img {
     font-size: 1.9rem;
 }
 
+.ul-list ul {
+    text-align: left;
+    font-size: 2rem;
+    margin-left: 40px;
+}
+
 .galleryPreview {
     width: 100%;
     margin: 0.5rem;
 }
 
-.showcase p {
-    font-size: 1.5rem;
-    text-align: left;
-    margin-top: 50px;
-}
-
-.showcase ul li {
-    padding-left: 25px;
-}
-
 .bottle-photo {
     float: left;
-    width: 30%;
-    margin-right: 15px;
+    width: 33%;
 }
 
 .bottle-name {
@@ -57,7 +52,7 @@ img {
     margin-top: 50px;
     padding-left: 40px;
     max-width: 740px;
-    font-family: Absolut, sans-serif;
+    font-size: 1.2rem;
 }
 
 .filter {
@@ -67,7 +62,6 @@ img {
 }
 
 .footer {
-    font-family: Absolut, sans-serif;
     font-size: 0.9em;
     margin-top: 25px;
     color: #888;

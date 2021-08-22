@@ -50,12 +50,22 @@ const bottleData = [
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/04/absolut_buenos_aires__0000.jpg"
     },
     {
+        "name": "Absolut Cilantro",
+        "filter": "Flavors & Premium",
+        "since": 2013,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "Absolut Cilantro is a contemporary new flavored vodka alive with aromatic cilantro and vibrant lime. Taking its inspiration from Latin American kitchens, Absolut Cilantro bursts onto the scene with a taste that’s smooth, fresh and unforgettable. Made from all natural flavors with no added sugar, it is versatile and easy to mix. Perfect for summer socializing.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2015/09/absolut_cilantro__0000.jpg"
+    },
+    {
         "name": "Absolut Drop of Love (mint) 700ml",
         "filter": "Limited Edition Bottle",
         "since": 2018,
         "distribution": "Worldwide except USA",
         "numberOfBottles": "2 432 242",
-        "designer": "NaN",
+        "designer": "",
         "description": "Blue tinted bottle with two bottle silhouette color versions (pink and mint) with word  'love' printed in 16 different languages on the bottle. Medallion features a white \"bleeding heart\" at the center.",
         "frontPhoto": "assets/images/absolut-vodka-a-drop-of-love_white.jpg"
     },
@@ -65,7 +75,7 @@ const bottleData = [
         "since": 2018,
         "distribution": "UNITED KINGDOM, CANADA",
         "numberOfBottles": "2 432 242",
-        "designer": "NaN",
+        "designer": "",
         "description": "Blue tinted bottle with two bottle silhouette color versions (pink and mint) with word  'love' printed in 16 different languages on the bottle. Special Pride medallion with rainbow colored heart.",
         "frontPhoto": "assets/images/absolut-vodka-a-drop-of-love_pride.jpg"
     },
@@ -85,7 +95,7 @@ const bottleData = [
         "since": 2015,
         "distribution": "Worldwide",
         "numberOfBottles": "Unknown amount of",
-        "designer": "NaN",
+        "designer": "",
         "description": "Absolut Electrik follows a celebrated tradition of introducing end of year limited editions featuring cutting-edge designs. The twin bottle release is available in electrik blue and silver, with semi-transparent coating creating see-through reflections. The two colors represent Absolut’s signature cobalt blue and the electrical conductivity of silver. When combined, the colors reflect an Electrik aesthetic reminiscent of flashing lights and pumping beats.",
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/01/absolut_electrik_blue__0000.jpg"
     },
@@ -95,7 +105,7 @@ const bottleData = [
         "since": 2010,
         "distribution": "Worldwide",
         "numberOfBottles": "Core release",
-        "designer": "NaN",
+        "designer": "",
         "description": "ABSOLUT ELYX is manually distilled in a 1921 copper rectification still known as Column 51, made entirely of copper. It is operated by a selected few who inherited their knowledge and expertise from past generations of spirit and vodka makers.<br><br>\n" +
             "\n" +
             "The silky textured vodka is a result of the single estate wheat, the manual operation and the old copper catalyzation process. The copper naturally catalyzes trace compounds in the spirit, purifying the vodka and adding a highly prized silky texture and taste.",
@@ -128,6 +138,16 @@ const bottleData = [
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/01/absolut_flavor_of_the_tropics__0000.jpg"
     },
     {
+        "name": "Absolut Gräpe",
+        "filter": "Flavors & Premium",
+        "since": 2013,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "Absolut Gräpe is incredibly easy to mix and is made from all-natural ingredients and contains no sugar. The combination of white grape, dragon fruit and papaya makes Absolut Gräpe so multi-dimensional, that you can make a sophisticated drink just by adding one ingredient.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/03/absolut_grape__0000.jpg"
+    },
+    {
         "name": "Absolut Greensaver",
         "filter": "Limited Edition Bottle",
         "since": 2008,
@@ -153,7 +173,7 @@ const bottleData = [
         "since": 2018,
         "distribution": "UK",
         "numberOfBottles": "Core release",
-        "designer": "NaN",
+        "designer": "",
         "description": "Flavored fruit juice 35% -abv. Contains natural ingredients and has a paper label with a suggestion that it is an autumn flavor",
         "frontPhoto": "assets/images/absolut-juice-apple.jpg"
     },
@@ -191,7 +211,7 @@ const bottleData = [
         "since": 2016,
         "distribution": "Worldwide",
         "numberOfBottles": "Core release",
-        "designer": "NaN",
+        "designer": "",
         "description": "Absolut Mango is made exclusively from natural ingredients, and unlike some other flavored vodkas, it doesn’t contain any added sugar. Absolut Mango is full-bodied and juicy with a character of ripe mango and notes of tropical fruits.",
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2017/01/absolut_mango_2016__0000.jpg"
     },
@@ -201,7 +221,7 @@ const bottleData = [
         "since": 2008,
         "distribution": "Worldwide",
         "numberOfBottles": "3 100 000",
-        "designer": "NaN",
+        "designer": "",
         "description": "The Masquerade skin is the 2008 end-of-the-year edition.<br><br>\n" +
             "\n" +
             "Shiny red skin containing a regular blue bottle.<br><br>\n" +
@@ -216,7 +236,7 @@ const bottleData = [
         "since": 2012,
         "distribution": "USA",
         "numberOfBottles": "141 000",
-        "designer": "NaN",
+        "designer": "",
         "description": "The Bottle is styled with sunshine, palm trees and waves as a show what Miami is known for.<br><br>\n" +
             "\n" +
             "The nose is heady with citrus, but it’s the distinct passion fruit character that cuts through the most succinctly. The orange is there in the body, but it’s an afterthought next to that really ripe and fruity passion fruit flavor. The body is solid, with a minimal medicinal aftertaste. Altogether it’s got a great balance of fruit and punchiness.",
@@ -248,7 +268,7 @@ const bottleData = [
         "since": 2007,
         "distribution": "USA",
         "numberOfBottles": "420 000",
-        "designer": "NaN",
+        "designer": "",
         "description": "Mango and Black Pepper flavored, Absolut New Orleans takes the vodka category in a daring new direction through a unique charity component, delicious new flavor combination and distinctive personality.<br><br>\n" +
             "\n" +
             "This is the first bottle in the “City Series”.",
@@ -260,7 +280,7 @@ const bottleData = [
         "since": 2009,
         "distribution": "France",
         "numberOfBottles": "2 000",
-        "designer": "NaN",
+        "designer": "",
         "description": "The label of the No Label French is different of a classic No Label, without LGBT flag colors on it.<br><br>\n" +
             "\n" +
             " \n" +
@@ -278,7 +298,7 @@ const bottleData = [
         "since": 2018,
         "distribution": "Republic of South Africa",
         "numberOfBottles": "9 996",
-        "designer": "NaN",
+        "designer": "",
         "description": "Featuring Khuli Chana with a hood and fire breathing as The Dragon. The One Source campaign in partnership with Absolut began with the release of an album and video in 2016 featuring Khuli Chana, Sarkodie (Ghana), Victoria Kimani (Kenya) and other African artists. A One Source Live (OSL) concert was held in Johannesburg on 24 March 2018.",
         "frontPhoto": "assets/images/onesource_thedragon.jpg"
     },
@@ -288,7 +308,7 @@ const bottleData = [
         "since": 2013,
         "distribution": "Worldwide",
         "numberOfBottles": "4 000 000",
-        "designer": "NaN",
+        "designer": "",
         "description": "Taking inspiration from traditional Swedish glass crafts, every bottle of Absolut Originality has a drop of cobalt blue infused into its glass. This colouring technique has been used for centuries in hand-made art glass, but never before has it been applied to create four million original bottles. Added just as the molten glass goes into the mould at 1100°C, the drop of cobalt blue streams down inside the glass creating a unique streak of blue. At that temperature the cobalt is invisible, but as the glass cools off, a beautiful and unique blue infusion appears.<br><br>Numbers: 361, 2 715 904, 1 580 180",
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/01/absolut_originality__0000.jpg"
     },
@@ -308,7 +328,7 @@ const bottleData = [
         "since": 2020,
         "distribution": "Worldwide",
         "numberOfBottles": "Core release",
-        "designer": "NaN",
+        "designer": "",
         "description": "Bold graphic design in green and yellow brushstrokes with swirls of purple. ABSOLUT PASSIONFRUIT in bold yellow color.",
         "frontPhoto": "assets/images/absolut-passionfruit.jpg"
     },
@@ -318,7 +338,7 @@ const bottleData = [
         "since": 2016,
         "distribution": "Worldwide",
         "numberOfBottles": "Core release",
-        "designer": "NaN",
+        "designer": "",
         "description": "Absolut Pears is made exclusively from natural ingredients, and unlike some other flavored vodkas, it doesn’t contain any added sugar. Absolut Pears is fresh and delicate, with a smack of mellow pears and a long fruity aftertaste.<br><br>\n" +
             "\n" +
             "In 1879, Lars Olsson Smith introduced the continuous distillation with which he made Absolut Rent Brännvin. Instead of the usual three or four times, the vodka was distilled an infinite number of times. Absolut Pears is made the same way, the only difference is the taste of pear. And, like the rest of the family, it’s produced in Åhus, L.O. Smith’s birth town. Since the process will never change, neither will the true taste of Absolut Pears.",
@@ -350,7 +370,7 @@ const bottleData = [
         "since": 2016,
         "distribution": "Worldwide",
         "numberOfBottles": "Core release",
-        "designer": "NaN",
+        "designer": "",
         "description": "Absolut Raspberri is made exclusively from natural ingredients, and unlike some other flavored vodkas, it doesn’t contain any added sugar. It’s rich and intense with the fresh and fruity character of ripened raspberries.",
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2017/01/absolut_raspberri_2016__0000.jpg"
     },
@@ -360,7 +380,7 @@ const bottleData = [
         "since": 2009,
         "distribution": "Worldwide",
         "numberOfBottles": "3 600 000",
-        "designer": "NaN",
+        "designer": "",
         "description": "The Rock skin is the 2009 end-of-the-year edition.<br><br>\n" +
             "\n" +
             "A Black leather limited edition second skin, with metal spikes, containing a regular blue bottle.<br><br>\n" +
@@ -374,7 +394,7 @@ const bottleData = [
         "since": 2013,
         "distribution": "Worldwide",
         "numberOfBottles": "Core release",
-        "designer": "NaN",
+        "designer": "",
         "description": "Absolut Ruby Red is made exclusively from natural ingredients, and unlike some other flavored vodkas, it doesn’t contain any added sugar. Absolut Ruby Red is smooth and fruity with a crisp and refreshing character of zesty grapefruit.",
         "frontPhoto": "assets/images/absolut-ruby-red-1000ml-40-vol.jpg"
     },
@@ -384,9 +404,9 @@ const bottleData = [
         "since": 2014,
         "distribution": "Colombia",
         "numberOfBottles": "1 000",
-        "designer": "NaN",
+        "designer": "",
         "description": "Colombian limited edition bottle.<br><br>\n" +
-            "This is a regular blue label 750ml, with a white plastic foil on it. Limited to approximatively 1000 copies.",
+            "This is a regular blue label 750ml, with a white plastic foil on it. Limited to approximately 1000 copies.",
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2015/08/absolut_soy_capaz_de__0000-1200x1800.jpg"
     },
     {
@@ -395,7 +415,7 @@ const bottleData = [
         "since": 2019,
         "distribution": "Belgium, Netherlands",
         "numberOfBottles": "35 000",
-        "designer": "NaN",
+        "designer": "",
         "description": "Pink/Rose bag bottom to Blue top enhanced by butterflies",
         "frontPhoto": "assets/images/absolut-tomorrowland-old.jpg"
     },
@@ -405,7 +425,7 @@ const bottleData = [
         "since": 2021,
         "distribution": "Austria, Belgium, Germany, Netherlands, Switzerland",
         "numberOfBottles": "Unknown amount of",
-        "designer": "NaN",
+        "designer": "",
         "description": "Issued for the Tomorrowland ZUM Festival featuring the words LIVE LOVE UNITE in pink and blue colors with butterflies and flowers",
         "frontPhoto": "assets/images/absolut-tomorrowland-new.jpg"
     },
@@ -415,7 +435,7 @@ const bottleData = [
         "since": 2018,
         "distribution": "USA",
         "numberOfBottles": "Unknown amount of",
-        "designer": "NaN",
+        "designer": "",
         "description": "Designed in red and white stripes and blue rectangle resembling the American Flag and in collaboration with the nonprofit Keep America Beautiful, the bottle represents unity",
         "frontPhoto": "assets/images/absolut-unity-700ml-40-vol.jpg"
     },
@@ -425,7 +445,7 @@ const bottleData = [
         "since": 2012,
         "distribution": "Worldwide",
         "numberOfBottles": "3 980 000",
-        "designer": "NaN",
+        "designer": "",
         "description": "The Unique is the 2012 end-of-the-year edition.<br><br>\n" +
             "\n" +
             "A special edition from Absolut, named for the fact that every bottle in the range is ‘unique’ – each has a numbered label and the same bottle shape, but other than that they are painted with different colours and shapes making each one different.<br><br>\n" +
@@ -447,12 +467,6 @@ const bottleData = [
     },
 ];
 
-function openModal(id) {
-    $(id).on('shown.bs.modal', function () {
-        $('#myInput').trigger('focus')
-    })
-}
-
 function bottleTemplate(bottle) {
     return `
         <div class="col-lg-1 d-block m-auto mb-4 mb-lg-0">
@@ -465,18 +479,18 @@ function bottleTemplate(bottle) {
             </a>
         </div>
         <div class="modal fade" id="${bottle.name.replace(/\W/g,'_')}" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-dialog modal-xl">
                 <div class="modal-content">
-                    <div class="modal-body">
+                    <div class="modal-body" style="font-size: 1.4rem">
                         <h2 class="bottle-name">${bottle.name}<br /><span class="filter">${bottle.filter}</span></h2>
                         <div class="row d-flex align-self-center">
                             <img class="bottle-photo" src="${bottle.frontPhoto}" alt="">
-                            <div>
-                                <ul style="text-align: left;font-size: 1.3rem">
-                                    <li style="list-style-image: url(/assets/images/svg/calendar-fill.svg)"><strong>${bottle.since}</strong></li>
-                                    <li style="list-style-image: url(/assets/images/svg/hand-thumbs-up-fill.svg)"><strong>${bottle.numberOfBottles} bottles</strong></li>
-                                    <li style="list-style-image: url(/assets/images/svg/brush-fill.svg)"><strong>Designer:</strong> ${bottle.designer}</li>
-                                    <li style="list-style-image: url(/assets/images/svg/geo-fill.svg)"><strong>Distributed in:</strong> ${bottle.distribution}</li>
+                            <div class="ul-list">
+                                <ul style="text-align: left;font-size: 1.8rem">
+                                    <li style="list-style-image: url(/assets/images/svg/calendar-event.svg)"><strong>${bottle.since}</strong></a></li>
+                                    <li style="list-style-image: url(/assets/images/svg/collection.svg)"><a><strong>${bottle.numberOfBottles} bottles</strong></a></li>
+                                    <li style="list-style-image: url(/assets/images/svg/brush.svg)"><a>${bottle.designer}</a></li>
+                                    <li style="list-style-image: url(/assets/images/svg/geo-alt.svg)"><a>${bottle.distribution}</a></li>
                                 </ul>
                                 <p class="description">${bottle.description}</p>
                             </div>

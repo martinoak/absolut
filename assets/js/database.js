@@ -67,17 +67,17 @@ const bottleData = [
         "numberOfBottles": "2 432 242",
         "designer": "",
         "description": "Blue tinted bottle with two bottle silhouette color versions (pink and mint) with word  'love' printed in 16 different languages on the bottle. Medallion features a white \"bleeding heart\" at the center.",
-        "frontPhoto": "assets/images/absolut-vodka-a-drop-of-love_white.jpg"
+        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-vodka-a-drop-of-love_white.jpg?raw=true"
     },
     {
-        "name": "Absolut Drop of Love (mint) 700ml",
+        "name": "Absolut Drop of Love (pride) 700ml",
         "filter": "Limited Edition Bottle",
         "since": 2018,
         "distribution": "UNITED KINGDOM, CANADA",
         "numberOfBottles": "2 432 242",
         "designer": "",
         "description": "Blue tinted bottle with two bottle silhouette color versions (pink and mint) with word  'love' printed in 16 different languages on the bottle. Special Pride medallion with rainbow colored heart.",
-        "frontPhoto": "assets/images/absolut-vodka-a-drop-of-love_pride.jpg"
+        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-vodka-a-drop-of-love_pride.jpg?raw=true"
     },
     {
         "name": "Absolut Dubai",
@@ -87,7 +87,7 @@ const bottleData = [
         "numberOfBottles": "Unknown amount of",
         "designer": "Randy Constantino",
         "description": "Medium blue bag depicting the city skyline with a bright orange sun rising above it",
-        "frontPhoto": "assets/images/absolut-dubai.jpg"
+        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-dubai.jpg?raw=true"
     },
     {
         "name": "Absolut Electrik Blue",
@@ -165,7 +165,7 @@ const bottleData = [
         "numberOfBottles": "Unknown amount of",
         "designer": "Unknown",
         "description": "N/A",
-        "frontPhoto": "assets/images/absolut-istanbul-bag.jpg"
+        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-istanbul-bag.jpg?raw=true"
     },
     {
         "name": "Absolut Juice Apple",
@@ -175,7 +175,7 @@ const bottleData = [
         "numberOfBottles": "Core release",
         "designer": "",
         "description": "Flavored fruit juice 35% -abv. Contains natural ingredients and has a paper label with a suggestion that it is an autumn flavor",
-        "frontPhoto": "assets/images/absolut-juice-apple.jpg"
+        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-juice-apple.jpg?raw=true"
     },
     {
         "name": "Absolut Karnival 1l",
@@ -260,7 +260,7 @@ const bottleData = [
         "numberOfBottles": "36 000",
         "designer": "James Ostrer",
         "description": "Inspired by the six colors of the LGBT Pride flag, the design’s semi-transparent triangles allow the bottle’s colors to overlap in distinct ways when viewed from different angles.",
-        "frontPhoto": "assets/images/absolut-vodka-mix-khuli-chana-signature-edition-750ml-43-vol.jpg"
+        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-vodka-mix-khuli-chana-signature-edition-750ml-43-vol.jpg?raw=true"
     },
     {
         "name": "Absolut New Orleans",
@@ -300,7 +300,7 @@ const bottleData = [
         "numberOfBottles": "9 996",
         "designer": "",
         "description": "Featuring Khuli Chana with a hood and fire breathing as The Dragon. The One Source campaign in partnership with Absolut began with the release of an album and video in 2016 featuring Khuli Chana, Sarkodie (Ghana), Victoria Kimani (Kenya) and other African artists. A One Source Live (OSL) concert was held in Johannesburg on 24 March 2018.",
-        "frontPhoto": "assets/images/onesource_thedragon.jpg"
+        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/onesource_thedragon.jpg?raw=true"
     },
     {
         "name": "Absolut Originality",
@@ -330,7 +330,7 @@ const bottleData = [
         "numberOfBottles": "Core release",
         "designer": "",
         "description": "Bold graphic design in green and yellow brushstrokes with swirls of purple. ABSOLUT PASSIONFRUIT in bold yellow color.",
-        "frontPhoto": "assets/images/absolut-passionfruit.jpg"
+        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-passionfruit.jpg?raw=true"
     },
     {
         "name": "Absolut Pears",
@@ -362,7 +362,7 @@ const bottleData = [
         "numberOfBottles": "10 000",
         "designer": "Pond Design",
         "description": "Exclusive for the Vienna \"Life-Ball\". A rainbow bottle edition with pink ribbon impossed on the mediallion",
-        "frontPhoto": "assets/images/absolut-life-ball-edition-700ml-40-vol.jpg"
+        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-life-ball-edition-700ml-40-vol.jpg?raw=true"
     },
     {
         "name": "Absolut Raspberri V3",
@@ -396,7 +396,7 @@ const bottleData = [
         "numberOfBottles": "Core release",
         "designer": "",
         "description": "Absolut Ruby Red is made exclusively from natural ingredients, and unlike some other flavored vodkas, it doesn’t contain any added sugar. Absolut Ruby Red is smooth and fruity with a crisp and refreshing character of zesty grapefruit.",
-        "frontPhoto": "assets/images/absolut-ruby-red-1000ml-40-vol.jpg"
+        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-ruby-red-1000ml-40-vol.jpg?raw=true"
     },
     {
         "name": "Absolut Soy Capaz De",
@@ -417,7 +417,7 @@ const bottleData = [
         "numberOfBottles": "35 000",
         "designer": "",
         "description": "Pink/Rose bag bottom to Blue top enhanced by butterflies",
-        "frontPhoto": "assets/images/absolut-tomorrowland-old.jpg"
+        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-tomorrowland-old.jpg?raw=true"
     },
     {
         "name": "Absolut Tomorrowland",
@@ -427,7 +427,7 @@ const bottleData = [
         "numberOfBottles": "Unknown amount of",
         "designer": "",
         "description": "Issued for the Tomorrowland ZUM Festival featuring the words LIVE LOVE UNITE in pink and blue colors with butterflies and flowers",
-        "frontPhoto": "assets/images/absolut-tomorrowland-new.jpg"
+        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-tomorrowland-new.jpg?raw=true"
     },
     {
         "name": "Absolut Unity",
@@ -437,7 +437,7 @@ const bottleData = [
         "numberOfBottles": "Unknown amount of",
         "designer": "",
         "description": "Designed in red and white stripes and blue rectangle resembling the American Flag and in collaboration with the nonprofit Keep America Beautiful, the bottle represents unity",
-        "frontPhoto": "assets/images/absolut-unity-700ml-40-vol.jpg"
+        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-unity-700ml-40-vol.jpg?raw=true"
     },
     {
         "name": "Absolut Unique",
@@ -474,7 +474,6 @@ function bottleTemplate(bottle) {
                 <img
                 src="${bottle.frontPhoto}"
                 class="shadow-1-strong galleryPreview"
-                alt=""
                 />
             </a>
         </div>
@@ -484,13 +483,13 @@ function bottleTemplate(bottle) {
                     <div class="modal-body">
                         <h2 class="bottle-name">${bottle.name}<br /><span class="filter">${bottle.filter}</span></h2>
                         <div class="row d-flex align-self-center">
-                            <img class="bottle-photo" src="${bottle.frontPhoto}" alt="">
+                            <img class="bottle-photo" src="${bottle.frontPhoto}">
                             <div class="ul-list">
                                 <ul>
-                                    <li style="list-style-image: url(/assets/images/svg/calendar-event.svg)"><strong>${bottle.since}</strong></a></li>
-                                    <li style="list-style-image: url(/assets/images/svg/collection.svg)"><a><strong>${bottle.numberOfBottles} bottles</strong></a></li>
-                                    <li style="list-style-image: url(/assets/images/svg/brush.svg)"><a>${bottle.designer}</a></li>
-                                    <li style="list-style-image: url(/assets/images/svg/geo-alt.svg)"><a>${bottle.distribution}</a></li>
+                                    <li style="list-style-image: url(https://raw.githubusercontent.com/MarvelousMartin/absolut-vodka-collection/master/assets/images/svg/calendar-event.svg)">${bottle.since}</li>
+                                    <li style="list-style-image: url(https://raw.githubusercontent.com/MarvelousMartin/absolut-vodka-collection/master/assets/images/svg/collection.svg)">${bottle.numberOfBottles} bottles</li>
+                                    <li style="list-style-image: url(https://raw.githubusercontent.com/MarvelousMartin/absolut-vodka-collection/master/assets/images/svg/brush.svg)">${bottle.designer}</li>
+                                    <li style="list-style-image: url(https://raw.githubusercontent.com/MarvelousMartin/absolut-vodka-collection/master/assets/images/svg/geo-alt.svg)">${bottle.distribution}</li>
                                 </ul>
                                 <p class="description">${bottle.description}</p>
                             </div>

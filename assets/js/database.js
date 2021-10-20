@@ -293,6 +293,16 @@ const bottleData = [
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/02/absolut_no_label_french__0000.jpg"
     },
     {
+        "name": "Absolut NOX (Night Edition)",
+        "filter": "Flavors & Premium",
+        "since": 2016,
+        "distribution": "Ibiza",
+        "numberOfBottles": "1500",
+        "designer": "",
+        "description": "Bottle made in 2016 only for the famous and mythic nightclub in Ibiza<br><br>\n Limited edition of 1 500 copies, it was never marketed, only sold inside the club.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2017/01/absolut_nox__0000.jpg"
+    },
+    {
         "name": "Absolut One Source Live (Dragon)",
         "filter": "Limited Edition Bottle",
         "since": 2018,

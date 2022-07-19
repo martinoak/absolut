@@ -343,18 +343,6 @@ const bottleData = [
         "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-passionfruit.jpg?raw=true"
     },
     {
-        "name": "Absolut Pears",
-        "filter": "Flavors & Premium",
-        "since": 2016,
-        "distribution": "Worldwide",
-        "numberOfBottles": "Core release",
-        "designer": "",
-        "description": "Absolut Pears is made exclusively from natural ingredients, and unlike some other flavored vodkas, it doesn’t contain any added sugar. Absolut Pears is fresh and delicate, with a smack of mellow pears and a long fruity aftertaste.<br><br>\n" +
-            "\n" +
-            "In 1879, Lars Olsson Smith introduced the continuous distillation with which he made Absolut Rent Brännvin. Instead of the usual three or four times, the vodka was distilled an infinite number of times. Absolut Pears is made the same way, the only difference is the taste of pear. And, like the rest of the family, it’s produced in Åhus, L.O. Smith’s birth town. Since the process will never change, neither will the true taste of Absolut Pears.",
-        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/02/absolut_pears_2016__0000.jpg"
-    },
-    {
         "name": "Absolut Rainbow",
         "filter": "Limited Edition Bottle",
         "since": 2017,
@@ -484,7 +472,7 @@ function bottleTemplate(bottle) {
                 <img
                 src="${bottle.frontPhoto}"
                 class="shadow-1-strong galleryPreview"
-                />
+                alt=""/>
             </a>
         </div>
         <div class="modal fade" id="${bottle.name.replace(/\W/g,'_')}" tabindex="-1" role="dialog" aria-hidden="true">
@@ -493,7 +481,7 @@ function bottleTemplate(bottle) {
                     <div class="modal-body">
                         <h2 class="bottle-name">${bottle.name}<br /><span class="filter">${bottle.filter}</span></h2>
                         <div class="row d-flex align-self-center">
-                            <img class="bottle-photo" src="${bottle.frontPhoto}">
+                            <img class="bottle-photo" src="${bottle.frontPhoto}" alt="">
                             <div class="ul-list">
                                 <ul>
                                     <li style="list-style-image: url(https://raw.githubusercontent.com/MarvelousMartin/absolut-vodka-collection/master/assets/images/svg/calendar-event.svg)">${bottle.since}</li>
@@ -532,4 +520,17 @@ document.getElementById("title").innerHTML = `
     "description": "",
     "frontPhoto": ""
 }
+
+{
+        "name": "Absolut Pears",
+        "filter": "Flavors & Premium",
+        "since": 2016,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "Absolut Pears is made exclusively from natural ingredients, and unlike some other flavored vodkas, it doesn’t contain any added sugar. Absolut Pears is fresh and delicate, with a smack of mellow pears and a long fruity aftertaste.<br><br>\n" +
+            "\n" +
+            "In 1879, Lars Olsson Smith introduced the continuous distillation with which he made Absolut Rent Brännvin. Instead of the usual three or four times, the vodka was distilled an infinite number of times. Absolut Pears is made the same way, the only difference is the taste of pear. And, like the rest of the family, it’s produced in Åhus, L.O. Smith’s birth town. Since the process will never change, neither will the true taste of Absolut Pears.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/02/absolut_pears_2016__0000.jpg"
+    },
 */

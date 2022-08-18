@@ -313,6 +313,16 @@ const bottleData = [
         "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/onesource_thedragon.jpg?raw=true"
     },
     {
+        "name": "Absolut Orient Apple",
+        "filter": "Flavors & Premium",
+        "since": 2011,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "Absolut Orient Apple is made exclusively from natural ingredients, and unlike some other flavored vodkas, it doesn’t contain any added sugar. Absolut Orient Apple is fresh and fruity with a distinct character of ripen red apples with a slight note of ginger.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/03/absolut_orient_apple__0000.jpg"
+    },
+    {
         "name": "Absolut Originality",
         "filter": "Limited Edition Bottle",
         "since": 2013,

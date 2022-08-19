@@ -1,5 +1,15 @@
 const bottleData = [
     {
+        "name": "Absolut Blue",
+        "filter": "",
+        "since": "",
+        "distribution": "Worldwide",
+        "numberOfBottles": "Unlimited",
+        "designer": "",
+        "description": "The ol' classic almighty one<br><br>Bottles I have:<br>0,05l<br>0,2l<br>0,7l",
+        "frontPhoto": "https://pictures.mydutyfree.net/images/products/92/18/700x700/absolut-blue.9218.jpg"
+    },
+    {
         "name": "Absolut 100 Selfridges",
         "filter": "Limited Edition Case",
         "since": 2009,
@@ -100,6 +110,18 @@ const bottleData = [
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/01/absolut_electrik_blue__0000.jpg"
     },
     {
+        "name": "Absolut Electrik Silver",
+        "filter": "Limited Edition Bottle",
+        "since": 2015,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Unknown amount of",
+        "designer": "",
+        "description": "The Electrik bottles are the 2015 end-of-the-year edition.\n" +
+            "\n" +
+            "Absolut Electrik contains the same Swedish vodka as a bottle of Absolut Vodka. It is made exclusively from natural ingredients, and unlike some other vodkas, it doesn’t contain any added sugar. In fact, Absolut is as clean as vodka can be. Still, it has a certain taste: Rich, full-bodied and complex, yet smooth and mellow with a distinct character of grain, followed by a hint of dried fruit.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/01/absolut_electrik_silver__0000.jpg"
+    },
+    {
         "name": "Absolut Elyx V3",
         "filter": "Flavors & Premium",
         "since": 2010,
@@ -176,6 +198,16 @@ const bottleData = [
         "designer": "",
         "description": "Flavored fruit juice 35% -abv. Contains natural ingredients and has a paper label with a suggestion that it is an autumn flavor",
         "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-juice-apple.jpg?raw=true"
+    },
+    {
+        "name": "Absolut Juice Strawberry",
+        "filter": "Flavors & Premium",
+        "since": 2018,
+        "distribution": "UK",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "Flavored fruit juice 35% -abv. Contains natural ingredients and has a paper label with a suggestion that it is an autumn flavor",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2014/05/absolut_juice_edition_strawberry.jpg"
     },
     {
         "name": "Absolut Karnival 1l",
@@ -351,6 +383,18 @@ const bottleData = [
         "designer": "",
         "description": "Bold graphic design in green and yellow brushstrokes with swirls of purple. ABSOLUT PASSIONFRUIT in bold yellow color.",
         "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-passionfruit.jpg?raw=true"
+    },
+    {
+        "name": "Absolut Pears",
+        "filter": "Flavors & Premium",
+        "since": 2016,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "Absolut Pears is made exclusively from natural ingredients, and unlike some other flavored vodkas, it doesn’t contain any added sugar. Absolut Pears is fresh and delicate, with a smack of mellow pears and a long fruity aftertaste.<br><br>\n" +
+            "\n" +
+            "In 1879, Lars Olsson Smith introduced the continuous distillation with which he made Absolut Rent Brännvin. Instead of the usual three or four times, the vodka was distilled an infinite number of times. Absolut Pears is made the same way, the only difference is the taste of pear. And, like the rest of the family, it’s produced in Åhus, L.O. Smith’s birth town. Since the process will never change, neither will the true taste of Absolut Pears.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/02/absolut_pears_2016__0000.jpg"
     },
     {
         "name": "Absolut Rainbow",
@@ -531,16 +575,4 @@ document.getElementById("title").innerHTML = `
     "frontPhoto": ""
 }
 
-{
-        "name": "Absolut Pears",
-        "filter": "Flavors & Premium",
-        "since": 2016,
-        "distribution": "Worldwide",
-        "numberOfBottles": "Core release",
-        "designer": "",
-        "description": "Absolut Pears is made exclusively from natural ingredients, and unlike some other flavored vodkas, it doesn’t contain any added sugar. Absolut Pears is fresh and delicate, with a smack of mellow pears and a long fruity aftertaste.<br><br>\n" +
-            "\n" +
-            "In 1879, Lars Olsson Smith introduced the continuous distillation with which he made Absolut Rent Brännvin. Instead of the usual three or four times, the vodka was distilled an infinite number of times. Absolut Pears is made the same way, the only difference is the taste of pear. And, like the rest of the family, it’s produced in Åhus, L.O. Smith’s birth town. Since the process will never change, neither will the true taste of Absolut Pears.",
-        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/02/absolut_pears_2016__0000.jpg"
-    },
 */

@@ -110,6 +110,16 @@ const bottleData = [
         "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-vodka-a-drop-of-love_white.jpg?raw=true"
     },
     {
+        "name": "Absolut Drop of Love (pink) 700ml",
+        "filter": "Limited Edition Bottle",
+        "since": 2018,
+        "distribution": "Worldwide except USA",
+        "numberOfBottles": "2 432 242",
+        "designer": "",
+        "description": "Blue tinted bottle with two bottle silhouette color versions (pink and mint) with word  'love' printed in 16 different languages on the bottle. Medallion features a white \"bleeding heart\" at the center.",
+        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-drop-of-love.jpg?raw=true"
+    },
+    {
         "name": "Absolut Drop of Love (pride) 700ml",
         "filter": "Limited Edition Bottle",
         "since": 2018,

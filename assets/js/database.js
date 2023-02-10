@@ -50,6 +50,26 @@ const bottleData = [
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/01/absolut_blank_kinsey__0000.jpg"
     },
     {
+        "name": "Absolut Boston",
+        "filter": "City series",
+        "since": 2009,
+        "distribution": "USA",
+        "numberOfBottles": "400 000",
+        "designer": "Unknown",
+        "description": "Absolut Boston is the third in the company’s ‘Cities’ range, following Absolut New Orleans and Absolut Brooklyn. A special limited-edition litre bottle of Absolut Boston, which has been flavoured with an intriguing combination of black tea and elderflower.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/01/absolut_boston__0000.jpg"
+    },
+    {
+        "name": "Absolut Brooklyn",
+        "filter": "City series",
+        "since": 2010,
+        "distribution": "USA",
+        "numberOfBottles": "225 000",
+        "designer": "Spike Lee",
+        "description": "Designed in collaboration with Spike Lee, the bottle is a colorful depiction of the stoop where the Brooklyn-bred auteur grew up – #165. Harkening back to the decades-long notion that the stoop is truly the epicenter of creativity, culture and community, the bottle serves as an homage to that Brooklyn ideal of stoop life – where memories are made and ideas are sparked through conversation and camaraderie.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/01/absolut_brooklyn__0000.jpg"
+    },
+    {
         "name": "Absolut Buenos Aires",
         "filter": "City series",
         "since": 2016,
@@ -58,6 +78,16 @@ const bottleData = [
         "designer": "Gaspar Libedinsky",
         "description": "The Obelisk is the silent witness to the diversity that surrounds and characterizes Buenos Aires. It knows the city’s most intimate stories. It is also the favourite meeting point for porteños, a place to celebrate their joys and make their frustrations known. As part of its effort to represent the idiosyncrasies and identity of the city and its inhabitants, Absolut Buenos Aires uses the location of the Obelisk to represent its new visual. This limited edition bottle’s illustration is an interpretation of the perspective one obtains from the monument itself, a window onto the world of the Cocktail City.",
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/04/absolut_buenos_aires__0000.jpg"
+    },
+    {
+        "name": "Absolut Chicago",
+        "filter": "City series",
+        "since": 2013,
+        "distribution": "USA",
+        "numberOfBottles": "270 000",
+        "designer": "Threadless",
+        "description": "Capturing the essence of the city’s thriving culinary scene, Absolut Chicago features a savory blend of olive and rosemary and a bottle that showcases the iconic cityscape, stemmed from a collaboration with Chicago’s own Threadless design community. Introducing Absolut Chicago – the vodka that captures the unique blend of the past with the cutting edge of right now that makes Chicago a modern classic.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2015/09/absolut_chicago__0000.jpg"
     },
     {
         "name": "Absolut Cilantro",
@@ -180,6 +210,30 @@ const bottleData = [
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/01/absolut_greensaver__0000.jpg"
     },
     {
+        "name": "Absolut India 2.0",
+        "filter": "City series",
+        "since": 2018,
+        "distribution": "India",
+        "numberOfBottles": "103 000",
+        "designer": "Ajay Boga",
+        "description": "Thanks to many conscious conservation efforts, India is now the home of 70 percent of the world’s tiger population. For the sequel of our highly appreciated and successful Absolut India Limited Edition Bottle, paying homage to its national animal was a natural given.  \n" +
+            "\n" +
+            "With no less than 2,400 artistic contribution from the crowdsourcing platform Talenthouse India, the National Institute of Design alumnus Ajay Boga exceeded everyone’s expectations, and became Absolut’s next creative collaborator to honour our iconic bottle with his unique piece of art. \n" +
+            "\n" +
+            "Ajay’s motif was inspired by the strength and the courage of a tiger, with various Indian patterns and elements highlighting the diversity, culture, energy and pride that the nation holds",
+        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-india-2.png?raw=true"
+    },
+    {
+        "name": "Absolut Istanbul",
+        "filter": "City series",
+        "since": 2012,
+        "distribution": "Turkey",
+        "numberOfBottles": "180 000",
+        "designer": "Yigit Yazici",
+        "description": "Collaboration between the trendy vodka label and Turkish Artist Yigit Yazici. Absolut Istanbul pays tribute to the city’s iconic emblems, Galata Tower and the Bosphorus in vibrant colours into a single bottle design.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2015/08/absolut_istanbul__0000-1200x1800.jpg"
+    },
+    {
         "name": "Absolut Istanbul Bag",
         "filter": "Limited Edition Bag",
         "since": 2012,
@@ -254,13 +308,18 @@ const bottleData = [
         "distribution": "Worldwide",
         "numberOfBottles": "3 100 000",
         "designer": "",
-        "description": "The Masquerade skin is the 2008 end-of-the-year edition.<br><br>\n" +
-            "\n" +
-            "Shiny red skin containing a regular blue bottle.<br><br>\n" +
-            "\n" +
-            "Made from soft and shiny red spangles, and with a zipper on the back, Absolut Masquerade really stands out and inspires consumers to join the glamorous masquerade.<br><br>" +
-            "The one-liter gift pack is built of exactly 3,238 shiny red spangles in the shape of a classic Absolut bottle, serving as an ultra-stylish package.",
+        "description": "The Masquerade skin is the 2008 end-of-the-year edition. Shiny red skin containing a regular blue bottle. Made from soft and shiny red spangles, and with a zipper on the back, Absolut Masquerade really stands out and inspires consumers to join the glamorous masquerade. The one-liter gift pack is built of exactly 3,238 shiny red spangles in the shape of a classic Absolut bottle, serving as an ultra-stylish package.",
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/02/absolut_masquerade__0000.jpg"
+    },
+    {
+        "name": "Absolut Mexico",
+        "filter": "City series",
+        "since": 2012,
+        "distribution": "Mexico & USA",
+        "numberOfBottles": "235 000",
+        "designer": "Dr. Lakra",
+        "description": "Dr Lakra, alias of Jeronimo Lopez Ramirez, a contemporary artist and tattooist, has collaborated with Absolut to pay homage to Mexican culture and the country’s multicultural heritage. For this project, Dr Lakra has created three modern bottle designs that “celebrate the spirit of Mexico”, featuring a trio of icons from ancient Mayan culture – Hurakan (hurricane), Kukulkan (serpent) and Balam (jaguar).",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2015/08/absolut_mexico__0000-1200x1800.jpg"
     },
     {
         "name": "Absolut Miami 750ml",
@@ -460,6 +519,17 @@ const bottleData = [
         "description": "Colombian limited edition bottle.<br><br>\n" +
             "This is a regular blue label 750ml, with a white plastic foil on it. Limited to approximately 1000 copies.",
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2015/08/absolut_soy_capaz_de__0000-1200x1800.jpg"
+    },
+    {
+        "name": "Absolut Texas",
+        "filter": "City series",
+        "since": 2014,
+        "distribution": "USA",
+        "numberOfBottles": "Unknown amount of",
+        "designer": "Cruz Ortiz",
+        "description": "Absolut vodka with cucumber and Serrano chili flavor\n" +
+            "The taste is rich and smooth with notes of fresh cucumber, and a warm spicy character; a flavor inspired by Southwestern cuisine, which is as unique and authentic as Texas. It pairs well with a myriad of ingredients, such as cranberry, cilantro and grapefruit soda.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2015/09/absolut_texas__0000.jpg"
     },
     {
         "name": "Absolut Tomorrowland Bag 700ml",

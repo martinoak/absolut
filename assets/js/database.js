@@ -176,6 +176,30 @@ const bottleData = [
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2015/09/absolut_exposure_1__0000.jpg"
     },
     {
+        "name": "Absolut Exposure 2",
+        "filter": "Limited Edition Bottle",
+        "since": 2013,
+        "distribution": "Worldwide in DFS",
+        "numberOfBottles": "100 000",
+        "designer": "Johan Renck",
+        "description": "A unique Traveler’s Exclusive limited edition flavour celebrating the arts of photography and illusion, in creative collaboration with visionary artist Johan Renck.<br><br>\n" +
+            "\n" +
+            "A new-generation flavour crafted with honey melon and lemongrass, Absolut Exposure is presented in a bottle with an innovative and groundbreaking design – Swedish artist Johan Renck has photographed actress and supermodel Lydia Hearst guised in a number of different “personas”, and has then incorporated the photographs in bottle printing, with stunning results.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2015/09/absolut_exposure_2__0000.jpg"
+    },
+    {
+        "name": "Absolut Exposure 3",
+        "filter": "Limited Edition Bottle",
+        "since": 2013,
+        "distribution": "Worldwide in DFS",
+        "numberOfBottles": "100 000",
+        "designer": "Johan Renck",
+        "description": "A unique Traveler’s Exclusive limited edition flavour celebrating the arts of photography and illusion, in creative collaboration with visionary artist Johan Renck.<br><br>\n" +
+            "\n" +
+            "A new-generation flavour crafted with honey melon and lemongrass, Absolut Exposure is presented in a bottle with an innovative and groundbreaking design – Swedish artist Johan Renck has photographed actress and supermodel Lydia Hearst guised in a number of different “personas”, and has then incorporated the photographs in bottle printing, with stunning results.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2015/09/absolut_exposure_3__0000.jpg"
+    },
+    {
         "name": "Absolut Flavor Of The Tropics",
         "filter": "Limited Edition Bottle",
         "since": 2009,
@@ -392,6 +416,16 @@ const bottleData = [
         "designer": "",
         "description": "Bottle made in 2016 only for the famous and mythic nightclub in Ibiza<br><br>\n Limited edition of 1 500 copies, it was never marketed, only sold inside the club.",
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2017/01/absolut_nox__0000.jpg"
+    },
+    {
+        "name": "Absolut Oak",
+        "filter": "Flavors & Premium",
+        "since": 2015,
+        "distribution": "USA",
+        "numberOfBottles": "Unknown amount of",
+        "designer": "",
+        "description": "Absolut Oak in clear bottle and created using the traditional craft of resting spirit in handmade oak barrels, along with a bespoke process of steeping vodka in oak chips.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2015/08/absolut_oak__0000-1200x1800.jpg"
     },
     {
         "name": "Absolut One Source Live (Dragon)",

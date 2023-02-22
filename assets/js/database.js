@@ -257,7 +257,7 @@ const bottleData = [
             "Ajay’s motif was inspired by the strength and the courage of a tiger, with various Indian patterns and elements highlighting the diversity, culture, energy and pride that the nation holds",
         "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-india-2.png?raw=true"
     },
-    {
+    /*{
         "name": "Absolut Istanbul",
         "filter": "City series",
         "since": 2012,
@@ -266,7 +266,7 @@ const bottleData = [
         "designer": "Yigit Yazici",
         "description": "Collaboration between the trendy vodka label and Turkish Artist Yigit Yazici. Absolut Istanbul pays tribute to the city’s iconic emblems, Galata Tower and the Bosphorus in vibrant colours into a single bottle design.",
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2015/08/absolut_istanbul__0000-1200x1800.jpg"
-    },
+    },*/
     {
         "name": "Absolut Istanbul Bag",
         "filter": "Limited Edition Bag",
@@ -646,6 +646,12 @@ function bottleTemplate(bottle) {
         <div class="modal fade" id="${bottle.name.replace(/\W/g,'_')}" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
+                    <div class="modal-header">
+                        <img src="assets/images/logo.png" style="width: 10%">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
                     <div class="modal-body">
                         <h2 class="bottle-name">${bottle.name}<br /><span class="filter">${bottle.filter}</span></h2>
                         <div class="row d-flex align-self-center">

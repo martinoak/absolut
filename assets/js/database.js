@@ -647,7 +647,7 @@ function bottleTemplate(bottle) {
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <img src="assets/images/logo.png" style="width: 10%" alt="">
+                        <img src="assets/images/logo-s.png" alt="">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

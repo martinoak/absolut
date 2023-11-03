@@ -387,7 +387,7 @@ const bottleData = [
         "numberOfBottles": "Core release",
         "designer": "",
         "description": "Absolut Mandrin was launched in 1999, 20 years after Absolut Vodka. It’s the fourth flavored Absolut product after Absolut Peppar, Absolut Citron and Absolut Kurant. And since mandarin and orange are among the most popular flavors in the world, Absolut Mandrin was received with the same enthusiasm as the rest of the family members.",
-        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/absolut-mandrin.jpg?raw=true"
+        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/absolut-mandrin.png?raw=true"
     },
     {
         "name": "Absolut Mango V3",
@@ -746,7 +746,8 @@ function bottleTemplate(bottle) {
                 <img
                 src="${bottle.frontPhoto}"
                 class="shadow-1-strong galleryPreview"
-                alt=""/>
+                alt=""
+                style="max-height: 210px; max-width: 140px; object-fit: contain"/>
             </a>
         </div>
         <div class="modal fade" id="${bottle.name.replace(/\W/g,'_')}" tabindex="-1" role="dialog" aria-hidden="true">

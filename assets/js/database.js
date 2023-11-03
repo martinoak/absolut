@@ -681,6 +681,17 @@ const bottleData = [
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2015/08/absolut_soy_capaz_de__0000-1200x1800.jpg"
     },
     {
+        "name": "Absolut Spirit of Togetherness",
+        "filter": "Limited Edition Bottle",
+        "since": 2022,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "A clear bottle of 57% recycled glass with a basket weave pattern is a powerful reminder of how all our lives are woven together and when people from all walks of life meet and connect. A blue paper label is affixed at the bottom of the bottle following the new 2020 design theme.",
+        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/absolut-togetherness.jpg?raw=true"
+
+    },
+    {
         "name": "Absolut Texas",
         "filter": "City series",
         "since": 2014,

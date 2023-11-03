@@ -208,6 +208,26 @@ const bottleData = [
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2015/08/absolut_elyx_v3__0000-1200x1800.jpg"
     },
     {
+        "name": "Absolut Elyx V4",
+        "filter": "Flavors & Premium",
+        "since": 2013,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "Premium line of ABSOLUT VODKA - copper distilled - copper square cap with rounded corners. Redesigned bottle has vertical copper bars surrounding the bottle reminiscent of the copper pipes used in the 1921 copper column still in which the vodka is produced. ELYX logo in off white panel with copper lettering. \"Single Estate Handcrafted Vodka.\" ABSOLUT LO Smith medallion printed on lower left on bottle front. Bottle size/shape is same as V3. Available in 40% and 42.3% alc.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2015/08/absolut_elyx_v4__0000-1200x1800.jpg"
+    },
+    {
+        "name": "Absolut Elyx V5",
+        "filter": "Flavors & Premium",
+        "since": 2019,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "Made from 40% recycled glass, the redesigned bottle celebrates the vintage copper creditials central to the creation of Absolut Elyx.  The faceted bottle pays homage to the vintage copper column still from 1921 giving the bottle a luminescent glimmer.  42.3% ABV",
+        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/absolut-elyx-5.jpg?raw=true"
+    },
+    {
         "name": "Absolut Exposure 1",
         "filter": "Limited Edition Bottle",
         "since": 2013,

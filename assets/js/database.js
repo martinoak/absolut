@@ -10,6 +10,20 @@ const bottleData = [
         "frontPhoto": "https://pictures.mydutyfree.net/images/products/92/18/700x700/absolut-blue.9218.jpg"
     },
     {
+        "name": "Absolut 100",
+        "filter": "Flavors & Premium",
+        "since": 2007,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "Unknown",
+        "description": "The 100 black bottle replace the red label bottle.\n" +
+            "\n" +
+            " \n" +
+            "\n" +
+            "Absolut 100 is made exclusively from natural ingredients, and unlike some other vodkas, it doesn’t contain any added sugar. It’s distinct with spicy notes, yet luxuriously smooth, with a fresh and velvety texture.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/01/absolut_100__0000.jpg"
+    },
+    {
         "name": "Absolut 100 Selfridges",
         "filter": "Limited Edition Case",
         "since": 2009,
@@ -28,6 +42,16 @@ const bottleData = [
         "designer": "Gao Yu",
         "description": "Mr. Gao’s strong design was inspired by an ancient Chinese fable, “Journey to the West,” a heroic story about the monkey king Sun Wukong, who acquires the power to undergo 72 transformations (or 72 bian). Using his fearlessness and creativity, he is able to overcome all obstacles.",
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/02/absolut_72_bian__0000.jpg"
+    },
+    {
+        "name": "Absolut Berri Açai",
+        "filter": "Flavors & Premium",
+        "since": 2013,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "Berri Açaí is a vodka with açaí, blueberry and pomegranate flavour, inspired by berries and fruits from around the world.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2015/09/absolut_berri_acai_2013__0000.jpg"
     },
     {
         "name": "Absolut Berlin",
@@ -100,6 +124,16 @@ const bottleData = [
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2015/09/absolut_cilantro__0000.jpg"
     },
     {
+        "name": "Absolut Citron",
+        "filter": "Flavors & Premium",
+        "since": 1988,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "Absolut Citron was good news for “vodka on the rocks with a twist of lemon” fans back in the 80’s (and there were lots of them). More specifically Absolut Citron was launched in 1988, nine years after Absolut Original and two years after the first flavored family member Absolut Peppar. The success was major among the twist-of-lemon-people, but it also became the main ingredient in the blockbuster drink “Cosmopolitan”.",
+        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/absolut-citron.png?raw=true"
+    },
+    {
         "name": "Absolut Drop of Love (mint) 700ml",
         "filter": "Limited Edition Bottle",
         "since": 2018,
@@ -107,7 +141,7 @@ const bottleData = [
         "numberOfBottles": "2 432 242",
         "designer": "",
         "description": "Blue tinted bottle with two bottle silhouette color versions (pink and mint) with word  'love' printed in 16 different languages on the bottle. Medallion features a white \"bleeding heart\" at the center.",
-        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-vodka-a-drop-of-love_white.jpg?raw=true"
+        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/absolut-vodka-a-drop-of-love_white.jpg?raw=true"
     },
     {
         "name": "Absolut Drop of Love (pink) 700ml",
@@ -117,7 +151,7 @@ const bottleData = [
         "numberOfBottles": "2 432 242",
         "designer": "",
         "description": "Blue tinted bottle with two bottle silhouette color versions (pink and mint) with word  'love' printed in 16 different languages on the bottle. Medallion features a white \"bleeding heart\" at the center.",
-        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-drop-of-love-pink.jpg?raw=true"
+        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/absolut-drop-of-love-pink.jpg?raw=true"
     },
     {
         "name": "Absolut Drop of Love (pride) 700ml",
@@ -127,7 +161,7 @@ const bottleData = [
         "numberOfBottles": "2 432 242",
         "designer": "",
         "description": "Blue tinted bottle with two bottle silhouette color versions (pink and mint) with word  'love' printed in 16 different languages on the bottle. Special Pride medallion with rainbow colored heart.",
-        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-vodka-a-drop-of-love_pride.jpg?raw=true"
+        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/absolut-vodka-a-drop-of-love_pride.jpg?raw=true"
     },
     {
         "name": "Absolut Dubai",
@@ -137,7 +171,7 @@ const bottleData = [
         "numberOfBottles": "Unknown amount of",
         "designer": "Randy Constantino",
         "description": "Medium blue bag depicting the city skyline with a bright orange sun rising above it",
-        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-dubai.jpg?raw=true"
+        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/absolut-dubai.jpg?raw=true"
     },
     {
         "name": "Absolut Electrik Blue",
@@ -234,6 +268,16 @@ const bottleData = [
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/03/absolut_grape__0000.jpg"
     },
     {
+        "name": "Absolut Gräpevine",
+        "filter": "Flavors & Premium",
+        "since": 2011,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "Absolut Gräpevine is incredibly easy to mix and is made from all-natural ingredients and contains no sugar. The combination of white grape, dragon fruit and papaya makes Absolut Gräpevine so multi-dimensional, that you can make a sophisticated drink just by adding one ingredient.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/03/absolut_grape__0000.jpg"
+    },
+    {
         "name": "Absolut Greensaver",
         "filter": "Limited Edition Bottle",
         "since": 2008,
@@ -255,7 +299,7 @@ const bottleData = [
             "With no less than 2,400 artistic contribution from the crowdsourcing platform Talenthouse India, the National Institute of Design alumnus Ajay Boga exceeded everyone’s expectations, and became Absolut’s next creative collaborator to honour our iconic bottle with his unique piece of art. \n" +
             "\n" +
             "Ajay’s motif was inspired by the strength and the courage of a tiger, with various Indian patterns and elements highlighting the diversity, culture, energy and pride that the nation holds",
-        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-india-2.png?raw=true"
+        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/absolut-india-2.png?raw=true"
     },
     /*{
         "name": "Absolut Istanbul",
@@ -275,7 +319,7 @@ const bottleData = [
         "numberOfBottles": "Unknown amount of",
         "designer": "Unknown",
         "description": "N/A",
-        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-istanbul-bag.jpg?raw=true"
+        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/absolut-istanbul-bag.jpg?raw=true"
     },
     {
         "name": "Absolut Juice Apple",
@@ -285,7 +329,7 @@ const bottleData = [
         "numberOfBottles": "Core release",
         "designer": "",
         "description": "Flavored fruit juice 35% -abv. Contains natural ingredients and has a paper label with a suggestion that it is an autumn flavor",
-        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-juice-apple.jpg?raw=true"
+        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/absolut-juice-apple.jpg?raw=true"
     },
     {
         "name": "Absolut Juice Strawberry",
@@ -324,6 +368,26 @@ const bottleData = [
             "\n" +
             "Absolut Korea reflects the vibrant and dynamic culture of Korea, where old meets new, taking inspiration from the structural features of traditional architecture.<br><br>",
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/04/absolut_korea__0000.jpg"
+    },
+    {
+        "name": "Absolut Kurant",
+        "filter": "Flavors & Premium",
+        "since": 2016,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "Absolut Kurant is made exclusively from natural ingredients, and unlike some other flavored vodkas, it doesn’t contain any added sugar. It’s smooth and mellow, with a fruity black currant character and a hint of tartness.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2017/01/absolut_kurant_2016__0000.jpg"
+    },
+    {
+        "name": "Absolut Mandrin",
+        "filter": "Flavors & Premium",
+        "since": 1999,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "Absolut Mandrin was launched in 1999, 20 years after Absolut Vodka. It’s the fourth flavored Absolut product after Absolut Peppar, Absolut Citron and Absolut Kurant. And since mandarin and orange are among the most popular flavors in the world, Absolut Mandrin was received with the same enthusiasm as the rest of the family members.",
+        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/absolut-mandrin.jpg?raw=true"
     },
     {
         "name": "Absolut Mango V3",
@@ -368,6 +432,18 @@ const bottleData = [
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2015/09/absolut_miami__0000.jpg"
     },
     {
+        "name": "Absolut Mini Bar",
+        "filter": "Limited Edition Bag",
+        "since": 2009,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Unknown amount of",
+        "designer": "",
+        "description": "A Square limited edition second skin, containing a regular blue bottle.\n" +
+            "\n" +
+            "The “Pop-up & serve” Mini Bar edition is made to be used as a garnish tray as you can see on the picture at the end of the gallery.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2016/02/absolut_mini_bar__0000.jpg"
+    },
+    {
         "name": "Absolut Mix",
         "filter": "Limited Edition Bottle",
         "since": 2016,
@@ -385,7 +461,7 @@ const bottleData = [
         "numberOfBottles": "36 000",
         "designer": "James Ostrer",
         "description": "Inspired by the six colors of the LGBT Pride flag, the design’s semi-transparent triangles allow the bottle’s colors to overlap in distinct ways when viewed from different angles.",
-        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-vodka-mix-khuli-chana-signature-edition-750ml-43-vol.jpg?raw=true"
+        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/absolut-vodka-mix-khuli-chana-signature-edition-750ml-43-vol.jpg?raw=true"
     },
     {
         "name": "Absolut New Orleans",
@@ -445,7 +521,7 @@ const bottleData = [
         "numberOfBottles": "9 996",
         "designer": "",
         "description": "Featuring Khuli Chana with a hood and fire breathing as The Dragon. The One Source campaign in partnership with Absolut began with the release of an album and video in 2016 featuring Khuli Chana, Sarkodie (Ghana), Victoria Kimani (Kenya) and other African artists. A One Source Live (OSL) concert was held in Johannesburg on 24 March 2018.",
-        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/onesource_thedragon.jpg?raw=true"
+        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/onesource_thedragon.jpg?raw=true"
     },
     {
         "name": "Absolut Orient Apple",
@@ -485,7 +561,7 @@ const bottleData = [
         "numberOfBottles": "Core release",
         "designer": "",
         "description": "Bold graphic design in green and yellow brushstrokes with swirls of purple. ABSOLUT PASSIONFRUIT in bold yellow color.",
-        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-passionfruit.jpg?raw=true"
+        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/absolut-passionfruit.jpg?raw=true"
     },
     {
         "name": "Absolut Pears",
@@ -517,7 +593,7 @@ const bottleData = [
         "numberOfBottles": "10 000",
         "designer": "Pond Design",
         "description": "Exclusive for the Vienna \"Life-Ball\". A rainbow bottle edition with pink ribbon impossed on the mediallion",
-        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-life-ball-edition-700ml-40-vol.jpg?raw=true"
+        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/absolut-life-ball-edition-700ml-40-vol.jpg?raw=true"
     },
     {
         "name": "Absolut Raspberri V3",
@@ -528,6 +604,16 @@ const bottleData = [
         "designer": "",
         "description": "Absolut Raspberri is made exclusively from natural ingredients, and unlike some other flavored vodkas, it doesn’t contain any added sugar. It’s rich and intense with the fresh and fruity character of ripened raspberries.",
         "frontPhoto": "https://absolutregis.com/wp-content/uploads/2017/01/absolut_raspberri_2016__0000.jpg"
+    },
+    {
+        "name": "Absolut Recycled",
+        "filter": "Limited Edition Bottle",
+        "since": 2019,
+        "distribution": "Worldwide",
+        "numberOfBottles": 1400000,
+        "designer": "",
+        "description": "\tMade of 41% recycled glass this clear multifaceted bottle represents the Absolut commitment to help the enviroment. ABSOLUT VODKA is in standard blue but appears on an angle. A fragment of ABSOLUT VODKA appears on obverse. EOY 2019 Release. Official release 1 October 2019.",
+        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/absolut-recycled.jpg?raw=true"
     },
     {
         "name": "Absolut Rock",
@@ -551,7 +637,17 @@ const bottleData = [
         "numberOfBottles": "Core release",
         "designer": "",
         "description": "Absolut Ruby Red is made exclusively from natural ingredients, and unlike some other flavored vodkas, it doesn’t contain any added sugar. Absolut Ruby Red is smooth and fruity with a crisp and refreshing character of zesty grapefruit.",
-        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-ruby-red-1000ml-40-vol.jpg?raw=true"
+        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/absolut-ruby-red-1000ml-40-vol.jpg?raw=true"
+    },
+    {
+        "name": "Absolut Sensations",
+        "filter": "Flavors & Premium",
+        "since": 2023,
+        "distribution": "Germany",
+        "numberOfBottles": "Unknown amount of",
+        "designer": "",
+        "description": "\tYellow background and orange circle figures suggesting the tropics. The green label at the bottom keeps in the new design style stating Less Alcohol and a Burst of Flavor.. The ABV is only 20%.",
+        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/absolut-sensations.jpg?raw=true"
     },
     {
         "name": "Absolut Soy Capaz De",
@@ -583,7 +679,7 @@ const bottleData = [
         "numberOfBottles": "35 000",
         "designer": "",
         "description": "Pink/Rose bag bottom to Blue top enhanced by butterflies",
-        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-tomorrowland-old.jpg?raw=true"
+        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/absolut-tomorrowland-old.jpg?raw=true"
     },
     {
         "name": "Absolut Tomorrowland",
@@ -593,7 +689,17 @@ const bottleData = [
         "numberOfBottles": "Unknown amount of",
         "designer": "",
         "description": "Issued for the Tomorrowland ZUM Festival featuring the words LIVE LOVE UNITE in pink and blue colors with butterflies and flowers",
-        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-tomorrowland-new.jpg?raw=true"
+        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/absolut-tomorrowland-new.jpg?raw=true"
+    },
+    {
+        "name": "Absolut Uncover",
+        "filter": "Limited Edition Bottle",
+        "since": 2017,
+        "distribution": "Worldwide",
+        "numberOfBottles": 2800000,
+        "designer": "",
+        "description": "Absolut Uncover Sequin edition – 2017 End Of the Year (EOY) edition.",
+        "frontPhoto": "https://absolutregis.com/wp-content/uploads/2018/01/absolut_uncover_sequin__0000.jpg"
     },
     {
         "name": "Absolut Unity",
@@ -603,7 +709,7 @@ const bottleData = [
         "numberOfBottles": "Unknown amount of",
         "designer": "",
         "description": "Designed in red and white stripes and blue rectangle resembling the American Flag and in collaboration with the nonprofit Keep America Beautiful, the bottle represents unity",
-        "frontPhoto": "https://github.com/MarvelousMartin/absolut-vodka-collection/blob/master/assets/images/absolut-unity-700ml-40-vol.jpg?raw=true"
+        "frontPhoto": "https://github.com/martinoak/absolut-vodka-collection/blob/master/assets/images/absolut-unity-700ml-40-vol.jpg?raw=true"
     },
     {
         "name": "Absolut Unique",
@@ -658,10 +764,10 @@ function bottleTemplate(bottle) {
                             <img class="bottle-photo" src="${bottle.frontPhoto}" alt="">
                             <div class="ul-list">
                                 <ul>
-                                    <li style="list-style-image: url(https://raw.githubusercontent.com/MarvelousMartin/absolut-vodka-collection/master/assets/images/svg/calendar-event.svg)">${bottle.since}</li>
-                                    <li style="list-style-image: url(https://raw.githubusercontent.com/MarvelousMartin/absolut-vodka-collection/master/assets/images/svg/collection.svg)">${bottle.numberOfBottles} bottles</li>
-                                    <li style="list-style-image: url(https://raw.githubusercontent.com/MarvelousMartin/absolut-vodka-collection/master/assets/images/svg/brush.svg)">${bottle.designer}</li>
-                                    <li style="list-style-image: url(https://raw.githubusercontent.com/MarvelousMartin/absolut-vodka-collection/master/assets/images/svg/geo-alt.svg)">${bottle.distribution}</li>
+                                    <li style="list-style-image: url(https://raw.githubusercontent.com/martinoak/absolut-vodka-collection/master/assets/images/svg/calendar-event.svg)">${bottle.since}</li>
+                                    <li style="list-style-image: url(https://raw.githubusercontent.com/martinoak/absolut-vodka-collection/master/assets/images/svg/collection.svg)">${bottle.numberOfBottles} bottles</li>
+                                    <li style="list-style-image: url(https://raw.githubusercontent.com/martinoak/absolut-vodka-collection/master/assets/images/svg/brush.svg)">${bottle.designer}</li>
+                                    <li style="list-style-image: url(https://raw.githubusercontent.com/martinoak/absolut-vodka-collection/master/assets/images/svg/geo-alt.svg)">${bottle.distribution}</li>
                                 </ul>
                                 <p class="description">${bottle.description}</p>
                             </div>

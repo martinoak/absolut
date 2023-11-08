@@ -19,4 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::any('/bottles', [VodkaController::class, 'apiBottles']);
+Route::any('/detail/{bottle}', [VodkaController::class, 'apiDetail'])->name('detail');

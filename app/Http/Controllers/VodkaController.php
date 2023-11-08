@@ -15,17 +15,33 @@ class VodkaController extends Controller
     ) {
     }
 
-    public function index(): View
+    public function index(Request $request): View
     {
+        $flavor = $request->input('flavors') ? 'Flavors & Premium' : null;
+        $cities = $request->input('cities') ? 'City series' : null;
+        $limited = $request->input('limited') ? 'Limited Edition' : null;
+        $sorted = $this->facade->getBottles();
+
+        $final = [];
+        if (request('flavors')) {
+            $final += array_filter($sorted, fn ($bottle) => $bottle->filter === $flavor);
+        }
+
+        if (request('cities')) {
+            $final += array_filter($sorted, fn ($bottle) => $bottle->filter === $cities);
+        }
+
+        if (request('limited')) {
+            $final += array_filter($sorted, fn ($bottle) => str_contains(strtolower($bottle->filter), strtolower($limited)));
+        }
+
         return view('home', [
-            'bottles' => $this->facade->getBottles(),
+            'bottles' => count($final) > 0 ? $final : $sorted,
         ]);
     }
 
-    public function apiBottles(Request $request): JsonResponse
+    public function apiDetail(string $bottle): JsonResponse
     {
-        $sort = $request->input('sort') ?? 'asc';
-        $bottles = $this->facade->getBottlesSorted($sort);
-        return response()->json($bottles);
+        return response()->json($this->facade->getBottle($bottle));
     }
 }

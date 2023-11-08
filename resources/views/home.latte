@@ -1,0 +1,18 @@
+{layout 'layout.latte'}
+
+{block content}
+{include 'partials/_nav.latte'}
+<div class="flex flex-wrap items-center justify-between mx-auto p-4">
+    <div class="grid grid-cols-1
+                     sm:grid-cols-3
+                     md:grid-cols-5
+                     lg:grid-cols-6
+                     xl:grid-cols-10 gap-2 mx-auto">
+        {foreach $bottles as $bottle}
+            <a class="flex flex-col items-center justify-end block max-w-sm" href="{route('detail', ['bottle' => $bottle->name])}">
+                <img src="{$bottle->frontPhoto}" class="h-64 object-cover" alt="">
+            </a>
+        {/foreach}
+    </div>
+</div>
+{/block}

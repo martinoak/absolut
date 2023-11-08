@@ -1,7 +1,24 @@
 {layout 'layout.latte'}
 
+{block head}
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+{/block}
+
 {block content}
-{include 'partials/_nav.latte'}
+<nav class="border-gray-200 bg-white mb-4">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="{route('homepage')}" class="flex items-center">
+            <img src="{asset('images/logo.png')}" class="h-8 mr-3" alt="Absolut" />
+        </a>
+        <div class="flex items-center">
+            <a href="" class="block px-4 py-2"><i class="fa-regular fa-lemon fa-lg"></i></a>
+            <a href="" class="block px-4 py-2"><i class="fa-regular fa-building fa-lg"></i></a>
+            <a href="" class="block px-4 py-2 me-4"><i class="fa-solid fa-arrow-down-1-9 fa-lg"></i></a>
+            <a href="" class="block px-4 py-2 me-4"><i class="fa-solid fa-asterisk fa-lg"></i></a>
+            <a href="" class="block px-4 py-2 me-4"><i class="fa-solid fa-moon fa-lg"></i></a>
+        </div>
+    </div>
+</nav>
 <div class="flex flex-wrap items-center justify-between mx-auto p-4">
     <div class="grid grid-cols-1
                      sm:grid-cols-3
@@ -9,7 +26,7 @@
                      lg:grid-cols-6
                      xl:grid-cols-10 gap-2 mx-auto">
         {foreach $bottles as $bottle}
-            <a class="flex flex-col items-center justify-end block max-w-sm" href="{route('detail', ['bottle' => $bottle->name])}">
+            <a class="flex flex-col items-center justify-end block max-w-sm" href="{route('bottle.detail', ['bottle' => $bottle->name])}">
                 <img src="{$bottle->frontPhoto}" class="h-64 object-cover" alt="">
             </a>
         {/foreach}

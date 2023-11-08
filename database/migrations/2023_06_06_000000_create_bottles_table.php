@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('bottles', function (Blueprint $table) {
-            $table->string('name', 18)->unique();
+            $table->id();
+            $table->string('name', 255);
             $table->string('filter')->nullable();
             $table->string('since')->nullable();
             $table->string('distribution')->nullable();

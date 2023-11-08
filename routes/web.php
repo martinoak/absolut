@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [VodkaController::class, 'index'])->name('homepage');
+Route::get('/bottles/{bottle}', [VodkaController::class, 'detail'])->name('bottle.detail');

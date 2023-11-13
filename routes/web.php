@@ -15,4 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [VodkaController::class, 'index'])->name('homepage');
+
 Route::get('/bottles/{bottle}', [VodkaController::class, 'detail'])->name('bottle.detail');
+
+Route::get('/new', [VodkaController::class, 'newBottle'])->name('bottle.new');
+Route::post('/new', [VodkaController::class, 'store'])->name('bottle.store');

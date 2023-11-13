@@ -42,6 +42,23 @@ class VodkaController extends Controller
 
     public function apiDetail(string $bottle): JsonResponse
     {
-        return response()->json($this->facade->getBottle($bottle));
+        return response()->json($this->facade->getBottleDescription($bottle));
+    }
+
+    public function newBottle(): View
+    {
+        return view('new');
+    }
+
+    public function store(Request $request): RedirectResponse
+    {
+        if ($request->hasFile('frontPhoto')) {
+            $request->file('frontPhoto')->storeAs(public_path('/paychecks/'), $request->file('frontPhoto')->getClientOriginalName());
+            $path = '/paychecks/'.$request->file('frontPhoto')->getClientOriginalName();
+        }
+
+        $this->facade->storeNewBottle($request->all(), $path);
+
+        return to_route('homepage');
     }
 }

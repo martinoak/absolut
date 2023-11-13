@@ -1,0 +1,14 @@
+<nav>
+    <div class="flex flex-wrap items-center justify-between mx-auto p-4 pb-0">
+        <a href="{route('homepage')}" class="flex items-center">
+            <img src="{asset('images/logo.png')}" class="h-8 mr-3" alt="Absolut" />
+        </a>
+        <div class="flex items-center">
+            <a href="{route('homepage')}?flavors={request('flavors') ? 0 : 1}&cities={request('cities') ? 1 : 0}&limited={request('limited') ? 1 : 0}" class="{if request('flavors')}text-white bg-[#0048ba] hover:bg-blue-800{else}text-[#0048ba] bg-white{/if} rounded-lg p-2 py-4 inline-flex items-center mr-2"><i class="fa-regular fa-lemon fa-lg"></i></a>
+            <a href="{route('homepage')}?flavors={request('flavors') ? 1 : 0}&cities={request('cities') ? 0 : 1}&limited={request('limited') ? 1 : 0}" class="{if request('cities')}text-white bg-[#0048ba] hover:bg-blue-800{else}text-[#0048ba] bg-white{/if} rounded-lg p-2 py-4 inline-flex items-center mr-2"><i class="fa-regular fa-building fa-lg"></i></a>
+            <a href="{route('homepage')}?flavors={request('flavors') ? 1 : 0}&cities={request('cities') ? 1 : 0}&limited={request('limited') ? 0 : 1}" class="{if request('limited')}text-white bg-[#0048ba] hover:bg-blue-800{else}text-[#0048ba] bg-white{/if} rounded-lg p-2 py-4 inline-flex items-center mr-2"><i class="fa-regular fa-gem fa-lg"></i></a>
+
+            <a href="{route('homepage')}" class="text-black rounded-lg p-2 py-4 inline-flex items-center"><i class="fa-solid fa-asterisk fa-lg"></i></a>
+        </div>
+    </div>
+</nav>

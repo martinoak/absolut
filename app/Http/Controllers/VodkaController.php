@@ -52,12 +52,10 @@ class VodkaController extends Controller
 
     public function store(Request $request): RedirectResponse
     {
-        if ($request->hasFile('frontPhoto')) {
-            $request->file('frontPhoto')->storeAs(public_path('/paychecks/'), $request->file('frontPhoto')->getClientOriginalName());
-            $path = '/paychecks/'.$request->file('frontPhoto')->getClientOriginalName();
-        }
+        $file = $request->file('frontPhoto')->getClientOriginalName();
+        $request->file('frontPhoto')->storeAs('/', $file);
 
-        $this->facade->storeNewBottle($request->all(), $path);
+        $this->facade->storeNewBottle($request->all(), $file);
 
         return to_route('homepage');
     }

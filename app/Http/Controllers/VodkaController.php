@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Facades\Facade;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -41,9 +40,10 @@ class VodkaController extends Controller
         ]);
     }
 
-    public function apiDetail(string $bottle): JsonResponse
+    public function show(string $bottle): View
     {
-        return response()->json($this->facade->getBottleDescription($bottle));
+        $data = $this->facade->getBottleByName($bottle);
+        return view('detail', compact('data'));
     }
 
     public function create(): View

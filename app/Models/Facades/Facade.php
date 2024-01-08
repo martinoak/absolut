@@ -11,9 +11,9 @@ class Facade
         return DB::table('bottles')->orderBy('name')->get()->toArray();
     }
 
-    public function getBottleDescription(string $name): string
+    public function getBottleByName(string $name): object
     {
-        return DB::table('bottles')->where('name', $name)->first()->description ?? '';
+        return DB::table('bottles')->where('name', $name)->first();
     }
 
     public function storeNewBottle(array $data, string $path): void

@@ -22,33 +22,9 @@
                      lg:grid-cols-6
                      xl:grid-cols-12">
             {foreach $bottles as $bottle}
-                <a v-on:click="getDescription('{$bottle->name}')" class="flex flex-col items-center justify-end" data-modal-target="{$bottle->name|webalize}" data-modal-toggle="{$bottle->name|webalize}">
+                <a href="{route('bottles.show', [bottle => $bottle->name])}" class="flex flex-col items-center justify-end">
                     <img src="{asset('/images/bottles/'.$bottle->frontPhoto)}" class="md:max-h-48 object-cover" alt="">
                 </a>
-
-                <!-- Modal -->
-                <div id="{$bottle->name|webalize}" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-                    <div class="relative w-full max-w-2xl max-h-full">
-                        <div class="relative bg-white rounded-lg shadow text-black">
-                            <div class="flex items-start justify-between pt-4 rounded-t">
-                                <h1 class="text-4xl font-bold text-black text-center w-full">
-                                    {$bottle->name|upper}
-                                </h1>
-                            </div>
-                            <!-- Modal body -->
-                            <div class="p-6 pt-0 space-y-6">
-                                <img src="{asset('/images/bottles/'.$bottle->frontPhoto)}" class="h-96 mx-auto object-cover" alt="">
-                                <div class="flex justify-between mx-4 h-12 items-center">
-                                    <h2 class="w-1/4 text-center border-r-2 border-[#0048ba] relative"><i class="fa-regular fa-calendar absolute inset-y-1/2 opacity-10" style="font-size: 60px; left: 47px; top: -100%"></i> {$bottle->since}</h2>
-                                    <h2 class="w-1/4 text-center border-x-2 border-[#0048ba] relative"><i class="fa-solid fa-hashtag absolute inset-y-1/2 opacity-10" style="font-size: 60px; left: 45px; top: -70%"></i>{$bottle->totalAmount}</h2>
-                                    <h2 class="w-1/4 text-center border-x-2 border-[#0048ba] relative"><i class="fa-solid fa-earth-europe absolute inset-y-1/2 opacity-10" style="font-size: 60px; left: 40px; top: -70%"></i>{$bottle->distribution}</h2>
-                                    <h2 class="w-1/4 text-center border-l-2 border-[#0048ba] relative"><i class="fa-solid fa-paintbrush absolute inset-y-1/2 opacity-10" style="font-size: 60px; left: 40px; top: -70%"></i>{$bottle->designer ?? ' '}</h2>
-                                </div>
-                                <p class="text-[#0048ba]" v-cloak>{{ description }}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             {/foreach}
         </div>
     </div>
@@ -57,23 +33,5 @@
 <footer class="text-center text-gray-400 my-3 text-sm">
     <p class="text-[#0048ba]"><i class="fa-regular fa-copyright pe-1"></i><i class="fa-solid fa-2"></i><i class="fa-solid fa-0"></i><i class="fa-solid fa-1"></i><i class="fa-solid fa-9"></i><i class="fa-solid fa-minus px-2"></i><i class="fa-solid fa-{str_split(date('Y'))[0]}"></i><i class="fa-solid fa-{str_split(date('Y'))[1]}"></i><i class="fa-solid fa-{str_split(date('Y'))[2]}"></i><i class="fa-solid fa-{str_split(date('Y'))[3]}"></i> </p>
 </footer>
-
-<script>
-    const app = new Vue({
-        el: '#app',
-        data: {
-            description: [],
-        },
-        methods: {
-            getDescription(bottleName) {
-                fetch(`/api/detail/` + bottleName)
-                    .then(response => response.json())
-                    .then(data => {
-                        this.description = data;
-                    });
-            }
-        }
-    })
-</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
 {/block}

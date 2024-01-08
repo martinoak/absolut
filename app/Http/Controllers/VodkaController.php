@@ -12,7 +12,7 @@ class VodkaController extends Controller
     public function __construct(
         private readonly Facade $facade,
     ) {
-        $this->middleware('auth')->except(['index']);
+        $this->middleware('auth')->except(['index', 'show']);
     }
 
     public function index(Request $request): View

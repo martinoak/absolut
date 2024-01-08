@@ -4,7 +4,19 @@
     <div class="container mx-auto">
         {include 'nav.latte'}
 
+        <div class="flex justify-center mt-12">
+            <div class="w-1/4">
+                <img src="{asset('images/bottles/'.$data->frontPhoto)}" alt="{$data->name}">
+            </div>
+            <div class="w-1/2 flex flex-col justify-center">
+                <h1 class="font-bold text-5xl">{$data->name}</h1>
+                <span class="mt-2">{$data->filter}</span>
+                <p class="mt-6">{$data->description|noescape}</p>
+                <div class="mt-6 flex flex-col">
+                    <p><span class="font-bold">Rok vydání: </span> {$data->since}</p>
+                    <p><span class="font-bold">Celkem lahví: </span> {$data->totalAmount}</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <h1>{$data->name}</h1>
-
 {/block}

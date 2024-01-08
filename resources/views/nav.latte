@@ -3,11 +3,10 @@
         <a href="{route('bottles.index')}" class="flex items-center">
             <h1 class="text-4xl text-[#0048ba]">ABSOLUT®</h1><h1 class="text-4xl text-black">MARTIN</h1>
         </a>
-        <div class="flex items-center">
-            <a href="{route('bottles.index')}?flavors={request('flavors') ? 0 : 1}&cities={request('cities') ? 1 : 0}&limited={request('limited') ? 1 : 0}" class="{if request('flavors')}text-white bg-[#0048ba] hover:bg-blue-800{else}text-[#0048ba] bg-white{/if} rounded-lg p-2 py-4 inline-flex items-center mr-2"><i class="fa-regular fa-lemon fa-lg"></i></a>
-            <a href="{route('bottles.index')}?flavors={request('flavors') ? 1 : 0}&cities={request('cities') ? 0 : 1}&limited={request('limited') ? 1 : 0}" class="{if request('cities')}text-white bg-[#0048ba] hover:bg-blue-800{else}text-[#0048ba] bg-white{/if} rounded-lg p-2 py-4 inline-flex items-center mr-2"><i class="fa-regular fa-building fa-lg"></i></a>
-            <a href="{route('bottles.index')}?flavors={request('flavors') ? 1 : 0}&cities={request('cities') ? 1 : 0}&limited={request('limited') ? 0 : 1}" class="{if request('limited')}text-white bg-[#0048ba] hover:bg-blue-800{else}text-[#0048ba] bg-white{/if} rounded-lg p-2 py-4 inline-flex items-center mr-2"><i class="fa-regular fa-gem fa-lg"></i></a>
-            <a href="{route('bottles.index')}" class="text-black rounded-lg p-2 py-4 inline-flex items-center"><i class="fa-solid fa-asterisk fa-lg"></i></a>
+        <div class="relative flex pb-1 items-center">
+            <div class="flex-grow border-t border-gray-400"></div>
+            <span class="flex-shrink mx-4 text-[#0048ba]"><i class="fa-solid fa-{floor(count($bottles) / 10)}"></i> <i class="fa-solid fa-{count($bottles) % 10}"></i></span>
+            <div class="flex-grow border-t border-gray-400"></div>
         </div>
     </div>
 </nav>

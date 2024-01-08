@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('bottles', function (Blueprint $table) {
             $table->id();
             $table->string('name', 255);
-            $table->string('filter')->nullable();
-            $table->string('since')->nullable();
+            $table->string('filter');
+            $table->string('since');
             $table->string('distribution')->nullable();
             $table->string('totalAmount')->nullable();
             $table->string('designer')->nullable();
-            $table->text('description')->nullable();
+            $table->text('description');
             $table->string('frontPhoto');
         });
     }

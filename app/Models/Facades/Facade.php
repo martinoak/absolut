@@ -23,6 +23,7 @@ class Facade
             'filter' => $data['filter'],
             'since' => $data['since'],
             'totalAmount' => $data['totalAmount'],
+            'price' => $data['price'],
             'description' => $data['description'],
             'frontPhoto' => $path,
         ]);

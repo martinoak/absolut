@@ -3,13 +3,19 @@
 {block content}
     <div style="display: flex; justify-content: center; align-items: center; height: 100vh">
         <form class="p-3 w-full md:w-1/4" method="post" action="{route('authenticate')}">
+            {csrf_field()|noescape}
+            {if session()->has('error')}
+            <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert">
+                <span class="font-medium">{session('error')}</span>
+            </div>
+            {/if}
             <div class="mb-5">
                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900">E-mail</label>
-                <input type="email" id="email" name="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
+                <input type="text" id="email" name="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
             </div>
             <div class="mb-5">
-                <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Your password</label>
-                <input type="password" id="password" name="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
+                <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Heslo</label>
+                <input type="password" id="password" name="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
             </div>
             <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Přihlásit se</button>
         </form>

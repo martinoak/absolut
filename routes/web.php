@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\VodkaController;
 use Illuminate\Support\Facades\Route;
@@ -21,3 +22,7 @@ Route::resource('bottles', VodkaController::class);
 
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('authenticate', [AuthController::class, 'authenticate'])->name('authenticate');
+
+Route::middleware('auth')->group(function () {
+    Route::get('admin', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+});

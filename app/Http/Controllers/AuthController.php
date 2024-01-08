@@ -16,8 +16,10 @@ class AuthController extends Controller
 
     public function authenticate(Request $request): RedirectResponse
     {
-        Auth::attempt($request->only('email', 'password'));
-
-        return to_route('bottles.create');
+        if (!Auth::attempt($request->only('email', 'password'))) {
+            return back()->with('error', 'Invalid credentials');
+        } else {
+            return to_route('admin.dashboard');
+        }
     }
 }

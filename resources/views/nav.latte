@@ -5,7 +5,7 @@
         </a>
         <div class="relative flex pb-1 items-center">
             <div class="flex-grow border-t border-gray-400"></div>
-            <span class="flex-shrink mx-4 text-[#0048ba]"><i class="fa-solid fa-{floor(count($bottles) / 10)}"></i> <i class="fa-solid fa-{count($bottles) % 10}"></i></span>
+            <span class="flex-shrink mx-4 text-[#0048ba]"><i class="fa-solid fa-{floor(count(Illuminate\Support\Facades\DB::table('bottles')->get()) / 10)}"></i> <i class="fa-solid fa-{count(Illuminate\Support\Facades\DB::table('bottles')->get()) % 10}"></i></span>
             <div class="flex-grow border-t border-gray-400"></div>
         </div>
     </div>

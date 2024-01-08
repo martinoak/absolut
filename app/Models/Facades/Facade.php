@@ -3,6 +3,7 @@
 namespace App\Models\Facades;
 
 use Illuminate\Support\Facades\DB;
+use Nette\Utils\Strings;
 
 class Facade
 {
@@ -20,6 +21,7 @@ class Facade
     {
         DB::table('bottles')->insert([
             'name' => 'Absolut '.$data['name'],
+            'handle' => Strings::webalize($data['name']),
             'filter' => $data['filter'],
             'since' => $data['since'],
             'totalAmount' => $data['totalAmount'],

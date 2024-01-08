@@ -39,7 +39,6 @@ class VodkaController extends Controller
     {
         $file = $request->file('frontPhoto')->getClientOriginalName();
         $request->file('frontPhoto')->storePubliclyAs('/', $file, 'local');
-
         $this->facade->storeNewBottle($request->all(), $file);
 
         return to_route('bottles.index');

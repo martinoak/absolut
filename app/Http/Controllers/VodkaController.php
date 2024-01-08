@@ -42,7 +42,7 @@ class VodkaController extends Controller
 
     public function show(string $bottle): View
     {
-        $data = $this->facade->getBottleByName($bottle);
+        $data = $this->facade->getBottleByHandle($bottle);
         return view('detail', compact('data'));
     }
 

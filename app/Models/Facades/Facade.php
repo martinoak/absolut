@@ -11,9 +11,9 @@ class Facade
         return DB::table('bottles')->orderBy('name')->get()->toArray();
     }
 
-    public function getBottleByName(string $name): object
+    public function getBottleByHandle(string $handle): object
     {
-        return DB::table('bottles')->where('name', $name)->first();
+        return DB::table('bottles')->where('handle', $handle)->first();
     }
 
     public function storeNewBottle(array $data, string $path): void
@@ -27,5 +27,10 @@ class Facade
             'description' => $data['description'],
             'frontPhoto' => $path,
         ]);
+    }
+
+    public function updateBottle(int $id, array $what): void
+    {
+        DB::table('bottles')->where('id', $id)->update($what);
     }
 }

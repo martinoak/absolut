@@ -6,6 +6,7 @@
 
     <form method="post" action="{route('bottles.store')}" class="mt-6" enctype="multipart/form-data">
         {csrf_field()|noescape}
+        <input type="hidden" name="handle" value="{\Nette\Utils\Strings::webalize($bottle->name)}">
         <div class="mb-6">
             <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Název</label>
             <div class="flex items-center">

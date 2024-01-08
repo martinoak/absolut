@@ -21,7 +21,7 @@ class Facade
     {
         DB::table('bottles')->insert([
             'name' => 'Absolut '.$data['name'],
-            'handle' => Strings::webalize($data['name']),
+            'handle' => Strings::webalize('Absolut '.$data['name']),
             'filter' => $data['filter'],
             'since' => $data['since'],
             'totalAmount' => $data['totalAmount'],

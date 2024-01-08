@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\VodkaController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [VodkaController::class, 'index'])->name('homepage');
+Route::redirect('/', '/bottles');
 
-Route::get('/bottles/{bottle}', [VodkaController::class, 'detail'])->name('bottle.detail');
+Route::resource('bottles', VodkaController::class);
 
-Route::get('/new', [VodkaController::class, 'newBottle'])->name('bottle.new');
-Route::post('/new', [VodkaController::class, 'store'])->name('bottle.store');
+Route::get('login', [AuthController::class, 'login'])->name('login');
+Route::post('authenticate', [AuthController::class, 'authenticate'])->name('authenticate');

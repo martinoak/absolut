@@ -13,6 +13,7 @@ class VodkaController extends Controller
     public function __construct(
         private readonly Facade $facade,
     ) {
+        $this->middleware('auth')->except(['index']);
     }
 
     public function index(Request $request): View
@@ -45,7 +46,7 @@ class VodkaController extends Controller
         return response()->json($this->facade->getBottleDescription($bottle));
     }
 
-    public function newBottle(): View
+    public function create(): View
     {
         return view('new');
     }
@@ -57,6 +58,6 @@ class VodkaController extends Controller
 
         $this->facade->storeNewBottle($request->all(), $file);
 
-        return to_route('homepage');
+        return to_route('bottles.index');
     }
 }

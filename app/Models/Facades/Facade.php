@@ -19,12 +19,10 @@ class Facade
     public function storeNewBottle(array $data, string $path): void
     {
         DB::table('bottles')->insert([
-            'name' => $data['name'],
+            'name' => 'Absolut '.$data['name'],
             'filter' => $data['filter'],
             'since' => $data['since'],
-            'distribution' => $data['distribution'],
             'totalAmount' => $data['totalAmount'],
-            'designer' => $data['designer'],
             'description' => $data['description'],
             'frontPhoto' => $path,
         ]);

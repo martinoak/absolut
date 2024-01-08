@@ -4,39 +4,32 @@
 <div class="container mx-auto">
     {include 'nav.latte'}
 
-    <form method="post" action="{route('bottle.store')}" class="mt-6" enctype="multipart/form-data">
+    <form method="post" action="{route('bottles.store')}" class="mt-6" enctype="multipart/form-data">
         {csrf_field()|noescape}
         <div class="mb-6">
             <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Název</label>
-            <input type="tel" id="name" name="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Absolut" required>
-        </div>
+            <div class="flex items-center">
+                Absolut <input type="tel" id="name" name="name" class="ml-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
+            </div>
         <div class="mb-6">
             <label for="filter" class="block mb-2 text-sm font-medium text-gray-900">Filtr</label>
             <select id="filter" name="filter" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" required>
-                <option value="Flavors & Premium">Flavors & Premium</option>
-                <option value="City Series">City Series</option>
-                <option value="Limited Edition">Limited Edition</option>
+                {foreach App\Enums\BottleFilters::cases() as $option}
+                    <option value="{$option->value}">{$option->value}</option>
+                {/foreach}
             </select>
         </div>
         <div class="mb-6">
             <label for="since" class="block mb-2 text-sm font-medium text-gray-900">Od roku</label>
-            <input type="number" id="since" name="since" pattern="[0-9]*" inputmode="numeric" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Absolut" required>
-        </div>
-        <div class="mb-6">
-            <label for="distribution" class="block mb-2 text-sm font-medium text-gray-900">Distribuce</label>
-            <input type="text" id="distribution" name="distribution" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" required>
+            <input type="number" id="since" name="since" pattern="[0-9]*" inputmode="numeric" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="{date('Y')}" required>
         </div>
         <div class="mb-6">
             <label for="totalAmount" class="block mb-2 text-sm font-medium text-gray-900">Počet lahví</label>
-            <input type="text" id="totalAmount" name="totalAmount" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Core release" required>
-        </div>
-        <div class="mb-6">
-            <label for="designer" class="block mb-2 text-sm font-medium text-gray-900">Designér</label>
-            <input type="text" id="designer" name="designer" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" required>
+            <input type="text" id="totalAmount" name="totalAmount" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Core Release" required>
         </div>
         <div class="mb-6">
             <label for="description" class="block mb-2 text-sm font-medium text-gray-900">Popis</label>
-            <textarea rows="3" id="description" name="description" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" required></textarea>
+            <textarea rows="4" id="description" name="description" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" required></textarea>
         </div>
         <div class="mb-6">
             <label for="frontPhoto" class="block mb-2 text-sm font-medium text-gray-900">Náhled (<a class="text-[#0048ba]" href="https://absolutpedia.com" target="_blank">Absolutpedia</a> pls)</label>

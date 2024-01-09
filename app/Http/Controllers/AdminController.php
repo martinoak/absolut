@@ -19,7 +19,7 @@ class AdminController extends Controller
 
     public function db(): View
     {
-        $bottles = DB::table('bottles')->get()->toArray();
+        $bottles = DB::table('bottles')->orderBy('name')->get()->toArray();
         return view('admin.db', compact('bottles'));
     }
 }

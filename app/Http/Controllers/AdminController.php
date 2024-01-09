@@ -16,4 +16,10 @@ class AdminController extends Controller
         }
         return view('admin.dashboard', compact('total'));
     }
+
+    public function db(): View
+    {
+        $bottles = DB::table('bottles')->get()->toArray();
+        return view('admin.db', compact('bottles'));
+    }
 }

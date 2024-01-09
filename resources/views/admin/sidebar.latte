@@ -8,13 +8,13 @@
     <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
         <ul class="space-y-2 font-medium">
             <li>
-                <a href="#" class="flex items-center p-2 rounded-lg text-black hover:bg-gray-300">
+                <a href="{route('admin.dashboard')}" class="flex items-center p-2 rounded-lg text-black hover:bg-gray-300">
                     <i class="fa-solid fa-chart-pie"></i>
                     <span class="ms-3">Dashboard</span>
                 </a>
             </li>
             <li>
-                <a href="#" class="flex items-center p-2 rounded-lg text-black hover:bg-gray-300">
+                <a href="{route('admin.db')}" class="flex items-center p-2 rounded-lg text-black hover:bg-gray-300">
                     <i class="fa-solid fa-database"></i>
                     <span class="flex-1 ms-3 whitespace-nowrap">Databáze</span>
                     <span class="inline-flex items-center justify-center h-3 p-3 ms-3 text-sm font-medium rounded-full bg-blue-900 text-white">{\Illuminate\Support\Facades\DB::table('bottles')->count()}</span>

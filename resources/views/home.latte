@@ -17,7 +17,7 @@
                      lg:grid-cols-6
                      xl:grid-cols-12">
             {foreach $bottles as $bottle}
-                <a href="{route('bottles.show', [bottle => ($bottle->name|webalize)])}" class="flex flex-col items-center justify-end">
+                <a href="{route('bottles.show', [bottle => $bottle->handle])}" class="flex flex-col items-center justify-end">
                     <img src="{asset('/images/bottles/'.$bottle->frontPhoto)}" class="md:max-h-48 object-cover" alt="">
                 </a>
             {/foreach}

@@ -25,4 +25,5 @@ Route::post('authenticate', [AuthController::class, 'authenticate'])->name('auth
 
 Route::middleware('auth')->group(function () {
     Route::get('admin', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('admin/db', [AdminController::class, 'db'])->name('admin.db');
 });

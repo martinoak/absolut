@@ -1,0 +1,46 @@
+{layout 'layout.latte'}
+
+{block content}
+<div class="container mx-auto">
+    {include 'nav.latte'}
+
+    <form action="{route('bottles.update')}" class="mt-6">
+        {csrf_field()|noescape}
+        <div class="mb-6">
+            <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Název</label>
+            <div class="flex items-center">
+                Absolut <input type="text" id="name" name="name" value="{$bottle['name'}" class="ml-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" autocomplete="off">
+            </div>
+        </div>
+        <div class="mb-6">
+            <label for="filter" class="block mb-2 text-sm font-medium text-gray-900">Filtr</label>
+            <select id="filter" name="filter" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" required>
+                {foreach App\Enums\BottleFilters::cases() as $option}
+                    <option value="{$option->value}">{$option->value}</option>
+                {/foreach}
+            </select>
+        </div>
+        <div class="mb-6">
+            <label for="since" class="block mb-2 text-sm font-medium text-gray-900">Od roku</label>
+            <input type="number" id="since" name="since" pattern="[0-9]*" inputmode="numeric" value="{$bottle['since']}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="{date('Y')}" required>
+        </div>
+        <div class="mb-6">
+            <label for="totalAmount" class="block mb-2 text-sm font-medium text-gray-900">Počet lahví</label>
+            <input type="text" id="totalAmount" name="totalAmount" value="{$bottle['totalAmount']}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" autocomplete="off" placeholder="Core Release">
+        </div>
+        <div class="mb-6">
+            <label for="description" class="block mb-2 text-sm font-medium text-gray-900">Popis</label>
+            <textarea rows="4" id="description" name="description" value="{$bottle['description']}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" required></textarea>
+        </div>
+        <div class="mb-6">
+            <label for="price" class="block mb-2 text-sm font-medium text-gray-900">Cena</label>
+            <input type="text" id="price" name="price" value="{$bottle['price']}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
+        </div>
+        <div class="mb-6">
+            <label for="frontPhoto" class="block mb-2 text-sm font-medium text-gray-900">Náhled</label>
+            <input id="frontPhoto" type="text" name="frontPhoto" value="{$bottle['frontPhoto']}" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50" required>
+        </div>
+        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm w-full py-2.5 text-center">Přidat</button>
+    </form>
+</div>
+{/block}

@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Facades\Facade;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
+use Nette\Utils\Strings;
 
 class VodkaController extends Controller
 {
@@ -33,6 +35,28 @@ class VodkaController extends Controller
     public function create(): View
     {
         return view('new');
+    }
+
+    public function edit(string $handle): View
+    {
+        $bottle = DB::table('bottles')->where('handle', $handle)->first()->toArray();
+
+        return view('edit', compact('bottle'));
+    }
+
+    public function update(Request $request, string $handle): RedirectResponse
+    {
+        DB::table('bottles')->where('handle', $handle)->update([
+            'name' => request('name') ?? '',
+            'handle' => Strings::webalize(request('name') ?? '') ?? '',
+            'filter' => request('filter') ?? '',
+            'since' => request('since') ?? '',
+            'totalAmount' => request('totalAmount') ?? '',
+            'frontPhoto' => request('frontPhoto') ?? '',
+            'prince' => request('price') ?? ''
+        ]);
+
+        return back()->with('success', 'Updated');
     }
 
     public function store(Request $request): RedirectResponse

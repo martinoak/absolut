@@ -56,7 +56,7 @@ class VodkaController extends Controller
             'prince' => request('price') ?? ''
         ]);
 
-        return back()->with('success', 'Updated');
+        return to_route('admin.dashboard');
     }
 
     public function store(Request $request): RedirectResponse
@@ -66,5 +66,12 @@ class VodkaController extends Controller
         $this->facade->storeNewBottle($request->all(), $file);
 
         return to_route('admin.dashboard');
+    }
+
+    public function destroy(string $bottle): RedirectResponse
+    {
+        DB::table('bottles')->where('handle', $bottle)->delete();
+
+        return back()->with('success', 'Deleted');
     }
 }

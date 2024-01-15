@@ -62,10 +62,14 @@
                         <td class="px-6 py-4">
                             {$bottle->price|number:0,',',' '} Kč
                         </td>
-                        <td class="px-6 py-4">
+                        <td class="px-6 py-4 flex">
                             <a href="{route('bottles.show', [bottle => $bottle->handle])}" class="text-white bg-green-700 hover:bg-green-800 font-medium rounded-lg text-sm p-2.5 me-2 mb-2"><i class="fa-solid fa-eye fa-lg"></i></a>
                             <a href="{route('bottles.edit', [bottle => $bottle->handle])}" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm p-2.5 me-2 mb-2"><i class="fa-solid fa-pencil fa-lg"></i></a>
-                            <a href="{route('bottles.destroy', [bottle => $bottle->handle])}" class="text-white bg-red-700 hover:bg-red-800 font-medium rounded-lg text-sm p-2.5 me-2 mb-2"><i class="fa-solid fa-trash-can fa-lg"></i></a>
+                            <form method="post" action="{route('bottles.destroy', [bottle => $bottle->handle])}">
+                                {csrf_field()|noescape}
+                                {method_field('DELETE')|noescape}
+                                <button type="submit" class="text-white bg-red-700 hover:bg-red-800 font-medium rounded-lg text-sm p-2.5 me-2 mb-2"><i class="fa-solid fa-trash-can fa-lg"></i></button>
+                            </form>
                         </td>
                     </tr>
                 {/foreach}

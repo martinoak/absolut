@@ -53,10 +53,10 @@ class VodkaController extends Controller
             'since' => request('since') ?? '',
             'totalAmount' => request('totalAmount') ?? '',
             'frontPhoto' => request('frontPhoto') ?? '',
-            'prince' => request('price') ?? ''
+            'price' => request('price') ?? ''
         ]);
 
-        return to_route('admin.dashboard');
+        return to_route('admin.db');
     }
 
     public function store(Request $request): RedirectResponse

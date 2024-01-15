@@ -57,7 +57,7 @@
                             {$bottle->totalAmount ?? '<span class="text-red-500 font-bold">Chybí</span>'|noescape}
                         </td>
                         <td>
-                            <img src="{asset('images/bottles/'.$bottle->frontPhoto)}" alt="{$bottle->name ?? '<span class="text-red-500 font-bold">Chybí</span>'|noescape}" class="w-20 h-20">
+                            <img src="{asset('images/bottles/'.$bottle->frontPhoto)}" alt="{$bottle->name ?? '<span class="text-red-500 font-bold">Chybí</span>'|noescape}" class="w-20 h-20 object-contain">
                         </td>
                         <td class="px-6 py-4">
                             {$bottle->price|number:0,',',' '} Kč

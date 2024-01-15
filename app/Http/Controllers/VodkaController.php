@@ -39,7 +39,7 @@ class VodkaController extends Controller
 
     public function edit(string $handle): View
     {
-        $bottle = DB::table('bottles')->where('handle', $handle)->first()->toArray();
+        $bottle = DB::table('bottles')->where('handle', $handle)->first();
 
         return view('edit', compact('bottle'));
     }

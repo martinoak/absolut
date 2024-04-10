@@ -1,10 +1,5 @@
 {layout 'layout.latte'}
 
-{block head}
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-{/block}
-
 {block content}
 <div class="container mx-auto" id="app">
     {include 'nav.latte'}
@@ -16,7 +11,7 @@
                      md:grid-cols-5
                      lg:grid-cols-6
                      xl:grid-cols-12">
-            {foreach $bottles as $bottle}
+            {foreach DB::table('bottles')->orderBy('name')->get()->toArray() as $bottle}
                 <a href="{route('bottles.show', [bottle => $bottle->handle])}" class="flex flex-col items-center justify-end">
                     <img src="{asset('/images/bottles/'.$bottle->frontPhoto)}" class="md:max-h-48 object-cover" alt="">
                 </a>
@@ -24,9 +19,4 @@
         </div>
     </div>
 </div>
-
-<footer class="text-center text-gray-400 my-3 text-sm">
-    <p class="text-[#0048ba]"><i class="fa-regular fa-copyright pe-1"></i><i class="fa-solid fa-2"></i><i class="fa-solid fa-0"></i><i class="fa-solid fa-1"></i><i class="fa-solid fa-9"></i><i class="fa-solid fa-minus px-2"></i><i class="fa-solid fa-{str_split(date('Y'))[0]}"></i><i class="fa-solid fa-{str_split(date('Y'))[1]}"></i><i class="fa-solid fa-{str_split(date('Y'))[2]}"></i><i class="fa-solid fa-{str_split(date('Y'))[3]}"></i> </p>
-</footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
 {/block}

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\MixologyController;
 use App\Http\Controllers\VodkaController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,14 +17,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::redirect('/', '/bottles');
+Route::view('/', 'home')->name('bottles.index');
 
-Route::resource('bottles', VodkaController::class);
+Route::resource('bottles', VodkaController::class)->except(['index']);
+Route::resource('mixology', MixologyController::class);
 
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('authenticate', [AuthController::class, 'authenticate'])->name('authenticate');
 
-Route::middleware('auth')->group(function () {
-    Route::get('admin', [AdminController::class, 'dashboard'])->name('admin.dashboard');
-    Route::get('admin/db', [AdminController::class, 'db'])->name('admin.db');
+Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
+    Route::get('/', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('db', [AdminController::class, 'db'])->name('admin.db');
 });

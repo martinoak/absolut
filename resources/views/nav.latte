@@ -1,12 +1,12 @@
 <nav>
     <div class="flex flex-wrap items-center justify-between mx-auto p-4 pb-0">
         <a href="{route('bottles.index')}" class="flex items-center">
-            <h1 class="text-4xl text-[#0048ba]">ABSOLUT®</h1><h1 class="text-4xl text-black">MARTIN</h1>
+            <h1 class="text-4xl text-[#0048ba]">ABSOLUT®</h1><h1 class="text-4xl text-black">{$title ?? 'MARTIN'}</h1>
         </a>
-        <div class="relative flex pb-1 items-center">
-            <div class="flex-grow border-t border-gray-400"></div>
-            <span class="flex-shrink font-bold mx-4 text-[#0048ba]">{\Illuminate\Support\Facades\DB::table('bottles')->count()}</span>
-            <div class="flex-grow border-t border-gray-400"></div>
-        </div>
+        {if url()->current() === route('bottles.index')}
+            <div class="relative flex pb-1 items-center">
+                <span class="flex-shrink font-bold mx-4 text-[#0048ba]">{\Illuminate\Support\Facades\DB::table('bottles')->count()}</span>
+            </div>
+        {/if}
     </div>
 </nav>

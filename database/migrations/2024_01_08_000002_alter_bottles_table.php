@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('bottles', function (Blueprint $table) {
-            $table->string('handle')->unique();
+            $table->string('handle', 40)->unique();
         });
     }
 

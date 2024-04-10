@@ -17,13 +17,6 @@ class VodkaController extends Controller
         $this->middleware('auth')->except(['index', 'show']);
     }
 
-    public function index(Request $request): View
-    {
-        return view('home', [
-            'bottles' => $this->facade->getBottles(),
-        ]);
-    }
-
     public function show(string $bottle): View
     {
         $data = $this->facade->getBottleByHandle($bottle);
@@ -62,7 +55,7 @@ class VodkaController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $file = $request->file('frontPhoto')->getClientOriginalName();
-        $request->file('frontPhoto')->storePubliclyAs('/', $file, 'local');
+        $request->file('frontPhoto')->storePubliclyAs('bottles/', $file, 'local');
         $this->facade->storeNewBottle($request->all(), $file);
 
         return to_route('admin.dashboard');

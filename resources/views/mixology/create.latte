@@ -1,0 +1,75 @@
+{layout '../layout.latte'}
+
+{block content}
+    <div class="container mx-auto">
+        {include 'nav.latte'}
+
+        <form method="post" action="{route('mixology.store')}" class="p-2" id="vue-form" enctype="multipart/form-data">
+            {csrf_field()|noescape}
+            <div class="mb-3">
+                <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Název drinku*</label>
+                <input type="text" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5" v-model="name" name="name" autocomplete="off" required />
+            </div>
+            <div class="mb-3">
+                <label for="slug" class="block mb-2 text-sm font-medium text-gray-900">Slug*</label>
+                <input type="text" id="slug" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5" v-model="slug" name="slug" autocomplete="off" readonly required />
+            </div>
+            <div class="mb-3">
+                <label for="thumbnail" class="block mb-2 text-sm font-medium text-gray-900">Thumbnail*</label>
+                <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" id="thumbnail" name="image" type="file" required>
+            </div>
+            <div class="mb-3">
+                <label for="video" class="block mb-2 text-sm font-medium text-gray-900">Video na YT</label>
+                <input type="text" id="video" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5" name="video_href" autocomplete="off" />
+            </div>
+            <div class="mb-3">
+                <label for="description" class="block mb-2 text-sm font-medium text-gray-900">Popis</label>
+                <textarea id="description" rows="4" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5"></textarea>
+            </div>
+            <label class="block mb-2 text-sm font-medium text-gray-900">Ingredience</label>
+            <div class="mb-3" v-for="(ingredient, index) in ingredients" :key="index">
+                <div class="flex">
+                    <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md">
+                        part
+                    </span>
+                    <input type="text" class="w-1/2 me-3 rounded-none rounded-e-lg bg-gray-50 border border-gray-300 text-gray-900 block flex-1 min-w-0 w-full text-sm p-2.5" v-model="ingredient.quantity" name="ing[][part]" autocomplete="off" placeholder="1/2">
+                    <input type="text" id="ingredient-name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5" v-model="ingredient.name" autocomplete="off" placeholder="Absolut Vodka" name="ing[][what]" />
+                </div>
+            </div>
+
+            <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Odeslat</button>
+        </form>
+    </div>
+
+    <script>
+        let vue = new Vue({
+            el: '#vue-form',
+            data: {
+                name: '',
+                slug: '',
+                ingredients: [
+                    { quantity: '', name: '' }
+                ]
+            },
+            watch: {
+                name: function (val) {
+                    this.slug = this.webalize(val);
+                },
+                ingredients: {
+                    handler: function (ingredients) {
+                        let lastIngredient = ingredients[ingredients.length - 1];
+                        if (lastIngredient.quantity && lastIngredient.name) {
+                            this.ingredients.push({ quantity: '', name: '' });
+                        }
+                    },
+                    deep: true
+                }
+            },
+            methods: {
+                webalize: function (str) {
+                    return str.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-/]/g, '');
+                }
+            }
+        });
+    </script>
+{/block}

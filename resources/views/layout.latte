@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100;400;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16"></script>
 
     <title>Absolut</title>
     <style>
@@ -31,10 +31,14 @@
 <body>
 
 {include content}
-<footer class="text-center text-gray-400 my-3 text-sm">
-    <p class="text-[#0048ba]"><i class="fa-regular fa-copyright pe-1"></i><i class="fa-solid fa-2"></i><i class="fa-solid fa-0"></i><i class="fa-solid fa-1"></i><i class="fa-solid fa-9"></i><i class="fa-solid fa-minus px-2"></i><i class="fa-solid fa-{str_split(date('Y'))[0]}"></i><i class="fa-solid fa-{str_split(date('Y'))[1]}"></i><i class="fa-solid fa-{str_split(date('Y'))[2]}"></i><i class="fa-solid fa-{str_split(date('Y'))[3]}"></i> </p>
-</footer>
+{if url()->current() === route('bottles.index')}
+    <footer class="text-center text-gray-400 my-3 text-sm">
+        <p class="text-[#0048ba]"><i class="fa-regular fa-copyright pe-1"></i><i class="fa-solid fa-2"></i><i class="fa-solid fa-0"></i><i class="fa-solid fa-1"></i><i class="fa-solid fa-9"></i><i class="fa-solid fa-minus px-2"></i><i class="fa-solid fa-{str_split(date('Y'))[0]}"></i><i class="fa-solid fa-{str_split(date('Y'))[1]}"></i><i class="fa-solid fa-{str_split(date('Y'))[2]}"></i><i class="fa-solid fa-{str_split(date('Y'))[3]}"></i> </p>
+    </footer>
+{/if}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
+
+{block bottomscripts}{/block}
 </body>
 </html>

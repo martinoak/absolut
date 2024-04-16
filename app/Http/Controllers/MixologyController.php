@@ -27,19 +27,20 @@ class MixologyController extends Controller
         $recipe->name = $request->input('name');
         $recipe->slug = $request->input('slug');
 
-        $request->file('image')->storeAs('recipes/', $recipe->slug . '.jpg');
-        $path = public_path('images/recipes/' . $recipe->slug . '.jpg');
+        $request->file('image')->storeAs('recipes/', $request->file('image')->getClientOriginalName());
+        $path = 'images/recipes/' . $request->file('image')->getClientOriginalName();
         $recipe->image = $path;
         $recipe->video_href = $request->input('video_href');
         $recipe->description = $request->input('description');
 
         $ingredients = [];
-        for ($i = 0; $i < count($request->input('ing')); $i += 2) {
-            if (isset($ing[$i]['part']) && isset($ing[$i+1]['what'])) {
+        $ing = $request->input('ing');
+        for ($i = 0; $i < count($ing); $i += 2) {
+            if (isset($ing[$i]['part'], $ing[$i+1]['what'])) {
                 $part = $ing[$i]['part'];
                 $what = $ing[$i+1]['what'];
                 if ($part !== null && $what !== null) {
-                    $ingredients[] = ['part' => $part, 'what' => $what];
+                    $ingredients[] = [$part => $what];
                 }
             }
         }
@@ -50,9 +51,11 @@ class MixologyController extends Controller
         return to_route('mixology.index');
     }
 
-    public function show(string $id)
+    public function show(string $recipe): View
     {
-        //
+        return view('mixology.show', [
+            'recipe' => Recipe::where('slug', $recipe)->first()
+        ]);
     }
 
     public function edit(string $id)

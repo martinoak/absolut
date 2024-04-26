@@ -4,34 +4,52 @@
     <div class="container mx-auto" id="app">
         {include 'nav.latte'}
 
-        <form>
-            {foreach $ingredients as $ingredient}
-                <div class="flex justify-between items-center border-b border-gray-200 p-4">
-                    <label><input type="checkbox" value="{$ingredient}" v-model="ingredients"> {$ingredient}</label>
+        {foreach $ingredients as $ingredient}
+            <div class="flex justify-between items-center border-b border-gray-200 p-4 mb-4">
+                <label><input type="checkbox" value="{$ingredient}" v-model="ingredients"> {$ingredient}</label>
+            </div>
+        {/foreach}
+
+
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg mx-auto" v-for="cocktail in cocktails">
+            <img class="max-h-[150px] w-full object-cover mb-4" v-bind:src="'/' + cocktail.image" alt="" style="object-position: 50% -140px" />
+            <div class="p-5">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-2xl text-gray-900">{{ cocktail.name }}</h1>
+                    <a v-bind:href="'/mixology/' + cocktail.slug" class="inline-flex items-center px-3 py-2 text-sm font-bold text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800">
+                        Mixuj
+                        <i class="fa-solid fa-martini-glass-citrus ms-2 fa-lg"></i>
+                    </a>
                 </div>
-            {/foreach}
-        </form>
+            </div>
+        </div>
     </div>
 {/block}
 
 {block bottomscripts}
-
-    {* create Vue block that will with every checkbox change send api request to MixologyController::apiGetPossibleCocktails() *}
     <script>
         let vue = new Vue({
-            el: '#app',
-            data: {
-                ingredients: []
-            },
-            watch: {
-                ingredients: function () {
-                    axios.post('/api/possible-cocktails', {
+        el: '#app',
+        data: {
+            ingredients: [],
+            cocktails: []
+        },
+        watch: {
+            ingredients: function () {
+                fetch('/api/possible-cocktails', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
                         ingredients: this.ingredients
-                    }).then(response => {
-                        console.log(response.data);
-                    });
-                }
+                    }),
+                })
+                .then(response => response.json())
+                .then(data => this.cocktails = data)
+                .then(data => console.log(data));
             }
-        });
+        }
+    });
     </script>
 {/block}

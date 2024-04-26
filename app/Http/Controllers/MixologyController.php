@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Models\Recipe;
@@ -81,13 +82,27 @@ class MixologyController extends Controller
         })->flatten()->unique()->values();
 
         foreach ($ingredients as $ingredient) {
-            $ing = array_keys((array) $ingredient)[0];
-            $what = $ingredient->$ing;
-            $lookup[$ing] = $what;
+            $lookup[] = array_values((array) $ingredient)[0];
         }
 
         return view('mixology.lookup', [
-            'ingredients' => array_values($lookup) ?? []
+            'ingredients' => array_unique(array_values($lookup)) ?? []
         ]);
+    }
+
+    public function getPossibleCocktails(Request $request): JsonResponse
+    {
+        $ingredients = $request->input('ingredients');
+        $recipes = Recipe::all()->filter(function ($recipe) use ($ingredients) {
+            $recipeIngredients = json_decode($recipe->ingredients);
+            $recipeIngredients = array_map(function ($ingredient) {
+                return array_values((array) $ingredient)[0];
+            }, $recipeIngredients);
+
+            // Check if all recipe ingredients are in the selected ingredients
+            return empty(array_diff($recipeIngredients, $ingredients));
+        });
+
+        return response()->json($recipes);
     }
 }

@@ -1,0 +1,37 @@
+{layout '../layout.latte'}
+
+{block content}
+    <div class="container mx-auto" id="app">
+        {include 'nav.latte'}
+
+        <form>
+            {foreach $ingredients as $ingredient}
+                <div class="flex justify-between items-center border-b border-gray-200 p-4">
+                    <label><input type="checkbox" value="{$ingredient}" v-model="ingredients"> {$ingredient}</label>
+                </div>
+            {/foreach}
+        </form>
+    </div>
+{/block}
+
+{block bottomscripts}
+
+    {* create Vue block that will with every checkbox change send api request to MixologyController::apiGetPossibleCocktails() *}
+    <script>
+        let vue = new Vue({
+            el: '#app',
+            data: {
+                ingredients: []
+            },
+            watch: {
+                ingredients: function () {
+                    axios.post('/api/possible-cocktails', {
+                        ingredients: this.ingredients
+                    }).then(response => {
+                        console.log(response.data);
+                    });
+                }
+            }
+        });
+    </script>
+{/block}

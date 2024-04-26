@@ -22,7 +22,9 @@ Route::view('/', 'home')->name('bottles.index');
 
 Route::resource('bottles', VodkaController::class)->except(['index']);
 Route::view('/sets', 'sets')->name('sets.index');
+
 Route::resource('mixology', MixologyController::class);
+Route::get('lookup', [MixologyController::class, 'lookup'])->name('mixology.lookup');
 
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('authenticate', [AuthController::class, 'authenticate'])->name('authenticate');

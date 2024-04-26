@@ -72,4 +72,22 @@ class MixologyController extends Controller
     {
         //
     }
+
+    public function lookup(): View
+    {
+        /* Get all ingredients from all recipes, remove duplicities and show them as array */
+        $ingredients = Recipe::all()->map(function ($recipe) {
+            return json_decode($recipe->ingredients);
+        })->flatten()->unique()->values();
+
+        foreach ($ingredients as $ingredient) {
+            $ing = array_keys((array) $ingredient)[0];
+            $what = $ingredient->$ing;
+            $lookup[$ing] = $what;
+        }
+
+        return view('mixology.lookup', [
+            'ingredients' => array_values($lookup) ?? []
+        ]);
+    }
 }

@@ -110,4 +110,21 @@ class MixologyController extends Controller
 
         return response()->json($recipes);
     }
+
+    public function with(string $with): View
+    {
+        $recipes = Recipe::all()->filter(function ($recipe) use ($with) {
+            $recipeIngredients = json_decode($recipe->ingredients);
+            $recipeIngredients = array_map(function ($ingredient) {
+                return array_values((array) $ingredient)[0];
+            }, $recipeIngredients);
+
+            return in_array($with, $recipeIngredients);
+        });
+
+        return view('mixology.with', [
+            'recipes' => $recipes,
+            'with' => $with
+        ]);
+    }
 }

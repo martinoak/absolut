@@ -588,50 +588,6 @@ video {
   }
 }
 
-.lookup-div {
-  margin-inline-end: 0.5rem;
-  margin-bottom: 0.5rem;
-  border-radius: 9999px;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-  text-align: center;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 500;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.lookup-div:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
-}
-
-.lookup-div label span {
-  padding-top: 3px;
-  padding-bottom: 3px;
-  padding-left: 0px;
-  padding-right: 0px;
-  text-align: center;
-}
-
-.lookup-div label input {
-  position: absolute;
-  display: none;
-}
-
-.absolut-vodka {
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
-}
-
-.absolut-vodka:checked {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
 .pointer-events-none {
   pointer-events: none;
 }
@@ -671,11 +627,6 @@ video {
 
 .z-\[1000\] {
   z-index: 1000;
-}
-
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
 }
 
 .mx-4 {
@@ -770,6 +721,10 @@ video {
   margin-top: 1.5rem;
 }
 
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
 .block {
   display: block;
 }
@@ -824,10 +779,6 @@ video {
 
 .h-6 {
   height: 1.5rem;
-}
-
-.h-64 {
-  height: 16rem;
 }
 
 .h-full {
@@ -1214,6 +1165,11 @@ video {
   line-height: 1rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1224,6 +1180,10 @@ video {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em;
 }
 
 .text-\[\#0048ba\] {

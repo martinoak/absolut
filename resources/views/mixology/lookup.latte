@@ -4,12 +4,13 @@
     <div class="container mx-auto" id="app">
         {include 'nav.latte'}
 
+        <h1>{count($ingredients)}</h1>
+
         {foreach $ingredients as $ingredient}
             <div class="flex justify-between items-center border-b border-gray-200 p-4 mb-4">
                 <label><input type="checkbox" value="{$ingredient}" v-model="ingredients"> {$ingredient}</label>
             </div>
         {/foreach}
-
 
         <div class="max-w-sm bg-white border border-gray-200 rounded-lg mx-auto" v-for="cocktail in cocktails">
             <img class="max-h-[150px] w-full object-cover mb-4" v-bind:src="'/' + cocktail.image" alt="" style="object-position: 50% -140px" />

@@ -6,12 +6,17 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Models\Recipe;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\View\View;
 
 class MixologyController extends Controller
 {
     public function index(): View
     {
+        Cache::remember('recipes', 10800, function () {
+            return Recipe::all();
+        });
+
         return view('mixology.index', [
             'recipes' => Recipe::all()
         ]);

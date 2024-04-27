@@ -49,7 +49,7 @@ class GetCocktailsCommand extends Command
                     !str_contains($url, 'terms');
         });
 
-        foreach ($cocktailPagesOnly as $recipePage) {
+        foreach (['https://www.absolutdrinks.com/en/drinks/summer-love/'] as $recipePage) {
             $guzzle = new \GuzzleHttp\Client();
             $res = $guzzle->get(trim($recipePage));
             $recipeHTML = $res->getBody()->getContents();

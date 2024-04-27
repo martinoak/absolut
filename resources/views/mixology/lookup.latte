@@ -4,8 +4,6 @@
     <div class="container mx-auto" id="app">
         {include 'nav.latte'}
 
-        <h1>{count($ingredients)}</h1>
-
         {foreach $ingredients as $ingredient}
             <div class="flex justify-between items-center border-b border-gray-200 p-4 mb-4">
                 <label><input type="checkbox" value="{$ingredient}" v-model="ingredients"> {$ingredient}</label>

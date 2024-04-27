@@ -5,8 +5,8 @@
         {include 'nav.latte'}
 
         {foreach $recipes as $recipe}
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg mx-auto">
-                <img class="max-h-[150px] w-full object-cover mb-4" src="/{$recipe->image}" alt="" style="object-position: 50% -140px" />
+            <div class="max-w-sm bg-white border border-gray-200 rounded-lg mx-auto my-2">
+                <img class="max-h-[150px] w-full object-cover mb-4" src="{$recipe->image}" alt="" style="object-position: 50% -140px" />
                 <div class="p-5">
                     <div class="flex justify-between items-center">
                         <h1 class="text-2xl text-gray-900">{$recipe->name}</h1>

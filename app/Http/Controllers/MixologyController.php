@@ -13,12 +13,15 @@ class MixologyController extends Controller
 {
     public function index(): View
     {
-        Cache::remember('recipes', 10800, function () {
-            return Recipe::all();
+        $recipes = Recipe::all();
+
+        Cache::remember('recipes', 10800, function () use ($recipes) {
+            return $recipes;
         });
 
         return view('mixology.index', [
-            'recipes' => Recipe::all()
+            'recipesOriginal' => $recipes,
+            'recipes' => $this->paginate($recipes, 10)->withPath(url()->current())
         ]);
     }
 
@@ -81,7 +84,6 @@ class MixologyController extends Controller
 
     public function lookup(): View
     {
-        /* Get all ingredients from all recipes, remove duplicities and show them as array */
         $ingredients = Recipe::all()->map(function ($recipe) {
             return json_decode($recipe->ingredients);
         })->flatten()->unique()->values();

@@ -4,14 +4,17 @@
     <div class="container mx-auto" id="app">
         {include 'nav.latte'}
 
-        {foreach $ingredients as $ingredient}
-            <div class="flex justify-between items-center border-b border-gray-200 p-4 mb-4">
-                <label><input type="checkbox" value="{$ingredient}" v-model="ingredients"> {$ingredient}</label>
-            </div>
-        {/foreach}
+        <div class="flex flex-wrap p-0.5">
+            {foreach $ingredients as $ingredient}
+                <div class="flex items-center m-0.5">
+                    <input type="checkbox" id="{$ingredient}" value="{$ingredient}" v-model="ingredients" class="peer hidden" />
+                    <label for="{$ingredient}" class="select-none rounded-lg border border-black py-1 px-2 font-bold text-black transition-colors duration-200 ease-in-out peer-checked:bg-[#0048ba] peer-checked:text-white"> {$ingredient} </label>
+                </div>
+            {/foreach}
+        </div>
 
-        <div class="max-w-sm bg-white border border-gray-200 rounded-lg mx-auto" v-for="cocktail in cocktails">
-            <img class="max-h-[150px] w-full object-cover mb-4" v-bind:src="'/' + cocktail.image" alt="" style="object-position: 50% -140px" />
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg mx-auto" v-for="cocktail in cocktails" id="recipesList">
+            <img class="w-full object-contain mb-4" v-bind:src="cocktail.image" alt="" />
             <div class="p-5">
                 <div class="flex justify-between items-center">
                     <h1 class="text-2xl text-gray-900">{{ cocktail.name }}</h1>
@@ -21,6 +24,12 @@
                     </a>
                 </div>
             </div>
+        </div>
+
+        <div class="fixed end-6 bottom-6 group">
+            <a href="#recipesList" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14">
+                <i class="fa-solid fa-martini-glass-citrus fa-lg"></i>
+            </a>
         </div>
     </div>
 {/block}
@@ -45,8 +54,10 @@
                     }),
                 })
                 .then(response => response.json())
-                .then(data => this.cocktails = data)
-                .then(data => console.log(data));
+                .then(data => {
+                    this.cocktails = data;
+                    console.log(this.cocktails); // Add this line
+                })
             }
         }
     });

@@ -4,35 +4,49 @@
     <div class="container mx-auto" id="app">
         {include 'nav.latte'}
 
-        {foreach $recipes as $recipe}
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg mx-auto my-2">
-                <img class="max-h-[150px] w-full object-cover mb-4" src="{$recipe->image}" alt="" style="object-position: 50% -140px" />
-                <div class="p-5">
-                    <div class="flex justify-between items-center">
-                        <h1 class="text-2xl text-gray-900">{$recipe->name}</h1>
-                        <a href="{route('mixology.show', [mixology => $recipe->slug])}" class="inline-flex items-center px-3 py-2 text-sm font-bold text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800">
-                            Mixuj
-                            <i class="fa-solid fa-martini-glass-citrus ms-2 fa-lg"></i>
-                        </a>
+        {foreach $recipesOriginal as $recipe}
+            <a href="{route('mixology.show', [mixology => $recipe->slug])}">
+                <div id="recipes" class="recipesAll w-[90%] bg-white border border-gray-200 rounded-lg mx-auto my-2" data-img="{$recipe->image}">
+                    <div class="preview">
+                        <img src="" style="display: none">
+                    </div>
+                    <div class="p-2">
+                        <div class="flex justify-center items-center">
+                            <h1 class="text-2xl text-gray-900 me-3">{$recipe->name}</h1>
+                            <h2 class="text-[#0048ba] text-sm">{$recipe->rating}</h2>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
         {/foreach}
+
+{*        <div class="flex justify-center items-center text-center p-2 h-[80vh]">*}
+{*            <h1 class="text-4xl text-gray-900">How to show 3000 cocktails and not fuck up my phone?</h1>*}
+{*        </div>*}
     </div>
 {/block}
 
 {block bottomscripts}
-<script>
+    <script>
     const search = document.getElementById('search');
-    console.log(search);
-    const recipes = document.querySelectorAll('.max-w-sm');
+    const recipes = document.querySelectorAll('.recipesAll');
 
     search.addEventListener('input', (e) => {
         const term = e.target.value.toLowerCase();
+        let count = 0;
         recipes.forEach(recipe => {
             const name = recipe.querySelector('h1').textContent.toLowerCase();
+            const preview = recipe.querySelector('.preview img');
+            const imgSrc = recipe.dataset.img;
             if (name.includes(term)) {
                 recipe.style.display = 'block';
+                count++;
+                if (term !== '' && count <= 10) {
+                    preview.src = imgSrc;
+                    preview.style.display = 'block';
+                } else {
+                    preview.style.display = 'none';
+                }
             } else {
                 recipe.style.display = 'none';
             }

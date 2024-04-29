@@ -3,7 +3,6 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MixologyController;
-use App\Http\Controllers\SetsController;
 use App\Http\Controllers\VodkaController;
 use Illuminate\Support\Facades\Route;
 

@@ -25,6 +25,7 @@ Route::view('/sets', 'sets')->name('sets.index');
 Route::prefix('mixology')->group(function () {
     Route::get('lookup', [MixologyController::class, 'lookup'])->name('mixology.lookup');
     Route::get('with/{with}', [MixologyController::class, 'with'])->name('mixology.with');
+    Route::get('favourites', [MixologyController::class, 'favourites'])->name('mixology.favourites');
 });
 Route::resource('mixology', MixologyController::class);
 

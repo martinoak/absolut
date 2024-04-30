@@ -129,4 +129,19 @@ class MixologyController extends Controller
             'with' => $with
         ]);
     }
+
+    public function favourites(Request $request): View|RedirectResponse
+    {
+        if ($request->has('favourite')) {
+            $recipe = Recipe::find($request->input('favourite'));
+            $recipe->isFavourite = !$recipe->isFavourite;
+            $recipe->save();
+
+            return redirect()->route('mixology.favourites');
+        }
+
+        $favourites = Recipe::where('isFavourite', true)->get();
+
+        return view('mixology.favourites', compact('favourites'));
+    }
 }

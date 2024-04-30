@@ -5,7 +5,7 @@ namespace App\Console\Commands;
 use App\Models\Recipe;
 use Illuminate\Console\Command;
 
-class RemoveIngredientCocktailsCommand extends Command
+class RemoveCocktailsCommand extends Command
 {
     /**
      * The name and signature of the console command.
@@ -28,11 +28,8 @@ class RemoveIngredientCocktailsCommand extends Command
     {
         $recipes = Recipe::all();
 
-        $missingIngredients = 'Galliano';
-
-        /* delete all cocktails that have $missingIngredients inside $recipe->ingredients */
         foreach ($recipes as $recipe) {
-            if (str_contains($recipe->ingredients, $missingIngredients)) {
+            if ($recipe->rating < 2.5) {
                 $recipe->delete();
             }
         }

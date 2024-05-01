@@ -7,7 +7,7 @@
         {foreach $favourites as $favourite}
             <a href="{route('mixology.show', [mixology => $favourite->slug])}" class="m-2 max-h-32 flex items-center border border-gray-200 rounded-lg shadow">
                 <img class="object-cover w-1/2 rounded-s-lg h-32 md:w-48" src="{$favourite->image}" alt="">
-                <div class="flex flex-col justify-between p-4">
+                <div class="flex flex-col justify-between p-4 w-1/2">
                     <h1 class="mb-2 text-2xl font-bold">{$favourite->name}</h1>
                     <h2 class="text-[#0048ba]">{$favourite->rating}</h2>
                 </div>

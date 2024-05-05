@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bottle;
 use App\Models\Facades\Facade;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -45,7 +46,6 @@ class VodkaController extends Controller
             'filter' => request('filter') ?? '',
             'since' => request('since') ?? '',
             'totalAmount' => request('totalAmount') ?? '',
-            'frontPhoto' => request('frontPhoto') ?? '',
             'price' => request('price') ?? ''
         ]);
 
@@ -54,9 +54,10 @@ class VodkaController extends Controller
 
     public function store(Request $request): RedirectResponse
     {
-        $file = $request->file('frontPhoto')->getClientOriginalName();
-        $request->file('frontPhoto')->storePubliclyAs('bottles/', $file, 'local');
-        $this->facade->storeNewBottle($request->all(), $file);
+        $bottle = new Bottle($request->all());
+        $bottle->handle = Strings::webalize($request->name);
+        $bottle->image = base64_encode(file_get_contents($request->file('frontPhoto')));
+        $bottle->save();
 
         return to_route('admin.dashboard');
     }

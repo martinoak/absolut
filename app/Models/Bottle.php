@@ -22,7 +22,6 @@ class Bottle extends Model
         'since',
         'totalAmount',
         'description',
-        'frontPhoto',
         'price',
     ];
 

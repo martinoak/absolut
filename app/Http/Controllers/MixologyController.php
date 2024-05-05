@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ingredient;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Models\Recipe;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use Illuminate\View\View;
 
 class MixologyController extends Controller
@@ -99,7 +102,14 @@ class MixologyController extends Controller
 
     public function getPossibleCocktails(Request $request): JsonResponse
     {
+        Ingredient::truncate();
+
         $ingredients = $request->input('ingredients');
+        foreach ($ingredients as $ingredient) {
+            $ingredient = new Ingredient(['name' => $ingredient, 'slug' => Str::slug($ingredient)]);
+            $ingredient->save();
+        }
+
         $recipes = Recipe::all()->filter(function ($recipe) use ($ingredients) {
             $recipeIngredients = json_decode($recipe->ingredients);
             $recipeIngredients = array_map(function ($ingredient) {
@@ -128,5 +138,20 @@ class MixologyController extends Controller
             'recipes' => $recipes,
             'with' => $with
         ]);
+    }
+
+    public function favourites(Request $request): View|RedirectResponse
+    {
+        if ($request->has('favourite')) {
+            $recipe = Recipe::find($request->input('favourite'));
+            $recipe->isFavourite = !$recipe->isFavourite;
+            $recipe->save();
+
+            return redirect()->route('mixology.favourites');
+        }
+
+        $favourites = Recipe::where('isFavourite', true)->get();
+
+        return view('mixology.favourites', compact('favourites'));
     }
 }

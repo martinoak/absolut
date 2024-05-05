@@ -3,7 +3,6 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MixologyController;
-use App\Http\Controllers\SetsController;
 use App\Http\Controllers\VodkaController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +25,7 @@ Route::view('/sets', 'sets')->name('sets.index');
 Route::prefix('mixology')->group(function () {
     Route::get('lookup', [MixologyController::class, 'lookup'])->name('mixology.lookup');
     Route::get('with/{with}', [MixologyController::class, 'with'])->name('mixology.with');
+    Route::get('favourites', [MixologyController::class, 'favourites'])->name('mixology.favourites');
 });
 Route::resource('mixology', MixologyController::class);
 

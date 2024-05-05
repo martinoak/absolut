@@ -4,7 +4,21 @@
     <div class="container mx-auto">
         {include 'nav.latte'}
 
-        <div class="flex justify-center mt-12">
+        <div class="block md:hidden">
+            <img src="data:image/jpeg;base64,{$data->image|noescape}" alt="{$data->name}">
+
+            <div class="flex flex-col text-center">
+                <h1 class="font-bold text-3xl">{$data->name}</h1>
+                <span class="mt-2">{$data->filter}</span>
+                <p class="mt-6">{$data->description|noescape}</p>
+                <div class="mt-6 flex flex-col">
+                    <p><span class="font-bold">Rok vydání: </span> {$data->since}</p>
+                    <p><span class="font-bold">Celkem lahví: </span> {$data->totalAmount}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden md:flex justify-center mt-12">
             <div class="w-1/4">
                 <img src="data:image/jpeg;base64,{$data->image|noescape}" alt="{$data->name}">
             </div>

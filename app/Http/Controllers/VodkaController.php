@@ -22,8 +22,9 @@ class VodkaController extends Controller
     {
         $data = $this->facade->getBottleByHandle($bottle);
         $bottles = $this->facade->getBottles();
+        $title = $data->name;
 
-        return view('detail', compact(['data', 'bottles']));
+        return view('detail', compact(['title', 'data', 'bottles']));
     }
 
     public function create(): View

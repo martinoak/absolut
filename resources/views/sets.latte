@@ -7,12 +7,12 @@
         {foreach App\Models\Bottle::all()->groupBy('set')->sortBy('set') as $set => $bottles}
             {continueIf !$set}
             <div class="p-4">
-                <h2 class="text-2xl font-bold text-center">{$set}</h2>
+                <h2 class="text-2xl text-center">{$set}</h2>
                 <hr class="border-t-2 border-[#0048ba] my-2 w-full">
                 <div class="flex flex-col md:flex-row justify-center">
                     {foreach $bottles as $bottle}
-                        <a href="{route('bottles.show', [bottle => $bottle->handle])}" class="flex items-center">
-                            <img src="{asset('images/bottles/'.$bottle->frontPhoto)}" alt="" class="w-32 object-cover rounded-lg">
+                        <a href="{route('bottles.show', [bottle => $bottle->handle])}" class="flex justify-center items-center">
+                            <img src="data:image/jpeg;base64,{$bottle->image|noescape}" alt="" class="w-40 object-cover rounded-lg">
                         </a>
                     {/foreach}
                 </div>

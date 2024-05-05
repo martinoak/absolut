@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'home')->name('bottles.index');
 
 Route::resource('bottles', VodkaController::class)->except(['index']);
-Route::view('/sets', 'sets')->name('sets.index');
+Route::view('sets', 'sets')->name('sets.index');
 
 Route::prefix('mixology')->group(function () {
     Route::get('lookup', [MixologyController::class, 'lookup'])->name('mixology.lookup');

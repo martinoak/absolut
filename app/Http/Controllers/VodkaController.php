@@ -56,6 +56,7 @@ class VodkaController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $bottle = new Bottle($request->all());
+        $bottle->name = 'Absolut '.$request->input('name');
         $bottle->handle = Strings::webalize($request->name);
         $bottle->image = base64_encode(file_get_contents($request->file('frontPhoto')));
         $bottle->save();

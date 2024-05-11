@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('ingredients', function (Blueprint $table) {
-            $table->string('name');
-            $table->string('slug')->primary();
+            $table->string('name', 30);
+            $table->string('slug', 30)->primary();
         });
     }
 

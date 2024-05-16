@@ -4,13 +4,11 @@
     <div class="container mx-auto" id="app">
         {include 'nav.latte'}
 
-        <div class="flex flex-wrap p-0.5">
-            {foreach $ingredients as $ingredient}
-                <div class="flex items-center m-0.5">
-                    <input type="checkbox" id="{$ingredient}" value="{$ingredient}" {if App\Models\Ingredient::where('name', $ingredient)->exists()}checked{/if} v-model="ingredients" class="peer hidden" />
-                    <label for="{$ingredient}" class="select-none rounded-lg border border-black py-1 px-2 font-bold text-black transition-colors duration-200 ease-in-out peer-checked:bg-[#0048ba] peer-checked:text-white" data-ingredient="{$ingredient}"> {$ingredient} </label>
-                </div>
-            {/foreach}
+        <div class="flex flex-wrap p-1">
+            <div class="flex items-center m-0.5" v-for="ingredient in ingredients">
+                <input type="checkbox" v-bind:id="ingredient" v-bind:value="ingredient" v-on:change="handleChange($event)" class="peer hidden" v-bind:checked="checkedIngredients.includes(ingredient)">
+                <label v-bind:for="ingredient" class="select-none rounded-lg border border-black py-1 px-2 font-bold text-black transition-colors duration-200 ease-in-out peer-checked:bg-[#0048ba] peer-checked:text-white" v-bind:class="{'peer-checked': ingredient.includes(ingredient)}">{{ ingredient }}</label>
+            </div>
         </div>
 
         <div class="max-w-sm bg-white border border-gray-200 rounded-lg mx-auto" v-for="cocktail in cocktails" id="recipesList">
@@ -38,31 +36,32 @@
 {/block}
 
 {block bottomscripts}
-    <script>
-        let vue = new Vue({
+<script>
+    let vue = new Vue({
         el: '#app',
         data: {
             ingredients: [],
+            checkedIngredients: {\App\Models\Ingredient::all()->pluck('name')->toArray()},
             cocktails: []
         },
         methods: {
-            ingredient: function (event) {
+            handleChange: function (event) {
                 if (event.target.checked) {
-                    this.ingredients.push(event.target.value);
+                    this.checkedIngredients.push(event.target.value);
                 } else {
-                    this.ingredients = this.ingredients.filter(item => item !== event.target.value);
+                    this.checkedIngredients = this.checkedIngredients.filter(item => item !== event.target.value);
                 }
             }
         },
         watch: {
-            ingredients: function () {
+            checkedIngredients: function () {
                 fetch('/api/possible-cocktails', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        ingredients: this.ingredients
+                        ingredients: this.checkedIngredients
                     }),
                 })
                 .then(response => response.json())
@@ -71,7 +70,11 @@
                     console.log(this.cocktails); // DO NOT REMOVE
                 })
             }
+        },
+        created: function () {
+            let data = {$ingredients};
+            this.ingredients = Object.keys(data).map(key => data[key]);
         }
     });
-    </script>
+</script>
 {/block}

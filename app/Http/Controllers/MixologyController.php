@@ -96,7 +96,7 @@ class MixologyController extends Controller
         }
 
         return view('mixology.lookup', [
-            'ingredients' => array_unique(array_values($lookup)) ?? []
+            'ingredients' => array_unique(array_values($lookup ?? []))
         ]);
     }
 

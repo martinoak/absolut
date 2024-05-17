@@ -38,43 +38,47 @@
 {block bottomscripts}
 <script>
     let vue = new Vue({
-        el: '#app',
-        data: {
-            ingredients: [],
-            checkedIngredients: {\App\Models\Ingredient::all()->pluck('name')->toArray()},
-            cocktails: []
-        },
-        methods: {
-            handleChange: function (event) {
-                if (event.target.checked) {
-                    this.checkedIngredients.push(event.target.value);
-                } else {
-                    this.checkedIngredients = this.checkedIngredients.filter(item => item !== event.target.value);
-                }
+    el: '#app',
+    data: {
+        ingredients: [],
+        checkedIngredients: {\App\Models\Ingredient::all()->pluck('name')->toArray()},
+        cocktails: []
+    },
+    methods: {
+        handleChange: function (event) {
+            if (event.target.checked) {
+                this.checkedIngredients.push(event.target.value);
+            } else {
+                this.checkedIngredients = this.checkedIngredients.filter(item => item !== event.target.value);
             }
         },
-        watch: {
-            checkedIngredients: function () {
-                fetch('/api/possible-cocktails', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        ingredients: this.checkedIngredients
-                    }),
-                })
-                .then(response => response.json())
-                .then(data => {
-                    this.cocktails = data;
-                    console.log(this.cocktails); // DO NOT REMOVE
-                })
-            }
-        },
-        created: function () {
-            let data = {$ingredients};
-            this.ingredients = Object.keys(data).map(key => data[key]);
+        fetchCocktails: function() {
+            fetch('/api/possible-cocktails', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    ingredients: this.checkedIngredients
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                this.cocktails = data;
+                console.log(Object.keys(data).length);
+            })
         }
-    });
+    },
+    watch: {
+        checkedIngredients: function () {
+            this.fetchCocktails();
+        }
+    },
+    created: function () {
+        let data = {$ingredients};
+        this.ingredients = Object.keys(data).map(key => data[key]);
+        this.fetchCocktails();
+    }
+});
 </script>
 {/block}

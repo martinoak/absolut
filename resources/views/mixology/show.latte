@@ -12,7 +12,11 @@
                 <h2>Ingredience</h2>
                 {foreach json_decode($recipe->ingredients, true) as $ingredient}
                     {foreach $ingredient as $part => $what}
-                        {$part ?: ''} <a href="{route('mixology.with', [with => $what])}" class="underline">{$what}</a><br>
+                        {$part ?: ''} <a href="{route('mixology.with', [with => $what])}" class="underline">{$what}</a>
+                        {if !in_array($what, \App\Models\Ingredient::all()->pluck('name')->toArray())}
+                            <span class="inline-flex w-2 h-2 mb-[1px] bg-red-500 rounded-full"></span>
+                        {/if}
+                        <br>
                     {/foreach}
                 {/foreach}
 

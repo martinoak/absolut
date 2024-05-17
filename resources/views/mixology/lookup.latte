@@ -4,28 +4,26 @@
     <div class="container mx-auto" id="app">
         {include 'nav.latte'}
 
-        <div class="flex flex-wrap p-1">
+        <button v-on:click="showIngredients = !showIngredients" class="text-black font-bold m-2">
+            Ingredience
+        </button>
+        <div class="flex flex-wrap p-1" v-if="showIngredients">
             <div class="flex items-center m-0.5" v-for="ingredient in ingredients">
                 <input type="checkbox" v-bind:id="ingredient" v-bind:value="ingredient" v-on:change="handleChange($event)" class="peer hidden" v-bind:checked="checkedIngredients.includes(ingredient)">
                 <label v-bind:for="ingredient" class="select-none rounded-lg border border-black py-1 px-2 font-bold text-black transition-colors duration-200 ease-in-out peer-checked:bg-[#0048ba] peer-checked:text-white" v-bind:class="{'peer-checked': ingredient.includes(ingredient)}">{{ ingredient }}</label>
             </div>
         </div>
 
-        <div class="max-w-sm bg-white border border-gray-200 rounded-lg mx-auto" v-for="cocktail in cocktails" id="recipesList">
-            <img class="w-full object-contain mb-4" v-bind:src="cocktail.image" alt="" />
-            <div class="p-5">
-                <div class="flex justify-between items-center">
-                    <div class="flex items-center">
-                        <h1 class="text-2xl text-gray-900">{{ cocktail.name }}</h1>
-                        <span class="ms-2 font-bold text-[#0048ba]">{{ cocktail.rating }}</span>
-                    </div>
-                    <a v-bind:href="'/mixology/' + cocktail.slug" class="inline-flex items-center px-3 py-2 text-sm font-bold text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800">
-                        Mixuj
-                        <i class="fa-solid fa-martini-glass-citrus ms-2 fa-lg"></i>
-                    </a>
+        <a v-bind:href="'/mixology/' + cocktail.slug" class="m-2 max-h-32 flex items-center border border-gray-200 rounded-lg shadow" v-for="cocktail in cocktails">
+            <img class="object-cover w-1/2 rounded-s-lg h-32 md:w-48" v-bind:src="cocktail.image" alt="">
+            <div class="flex flex-col justify-between p-4 w-1/2">
+                <h1 class="mb-2 text-2xl font-bold">{{ cocktail.name }}</h1>
+                <div class="flex items-center justify-between">
+                    <h2 class="text-[#0048ba]">{{ cocktail.rating }}</h2>
+
                 </div>
             </div>
-        </div>
+        </a>
 
         <div class="fixed end-6 bottom-6 group">
             <a href="#recipesList" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14">
@@ -42,7 +40,8 @@
     data: {
         ingredients: [],
         checkedIngredients: {\App\Models\Ingredient::all()->pluck('name')->toArray()},
-        cocktails: []
+        cocktails: [],
+        showIngredients: true
     },
     methods: {
         handleChange: function (event) {

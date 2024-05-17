@@ -151,6 +151,17 @@ class MixologyController extends Controller
         }
 
         $favourites = Recipe::where('isFavourite', true)->get();
+        foreach ($favourites as $f) {
+            /* I would like to count available ingredients from Ingredients model, and if all ingredients are available, then display a green checkmark, otherwise a red cross, also add property "totalIngredients", "availableIngredients" which will have integer values */
+            $recipeIngredients = json_decode($f->ingredients);
+            $recipeIngredients = array_map(function ($ingredient) {
+                return array_values((array) $ingredient)[0];
+            }, $recipeIngredients);
+
+            $f->totalI = count($recipeIngredients);
+            $f->availableI = Ingredient::whereIn('name', $recipeIngredients)->count();
+            $f->canMix = $f->totalI === $f->availableI;
+        }
 
         return view('mixology.favourites', compact('favourites'));
     }

@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MixologyController;
+use App\Http\Controllers\OccasionController;
 use App\Http\Controllers\VodkaController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home')->name('bottles.index');
 
+Route::get('login', [AuthController::class, 'login'])->name('login');
+Route::post('authenticate', [AuthController::class, 'authenticate'])->name('authenticate');
+
 Route::resource('bottles', VodkaController::class)->except(['index']);
 Route::view('sets', 'sets')->name('sets.index');
 
@@ -26,11 +30,11 @@ Route::prefix('mixology')->group(function () {
     Route::get('lookup', [MixologyController::class, 'lookup'])->name('mixology.lookup');
     Route::get('with/{with}', [MixologyController::class, 'with'])->name('mixology.with');
     Route::get('favourites', [MixologyController::class, 'favourites'])->name('mixology.favourites');
-});
-Route::resource('mixology', MixologyController::class);
 
-Route::get('login', [AuthController::class, 'login'])->name('login');
-Route::post('authenticate', [AuthController::class, 'authenticate'])->name('authenticate');
+    Route::resource('occasions', OccasionController::class);
+});
+
+Route::resource('mixology', MixologyController::class);
 
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     Route::get('/', [AdminController::class, 'dashboard'])->name('admin.dashboard');

@@ -48,14 +48,17 @@ class OccasionController extends Controller
      */
     public function show(string $id): View
     {
-        $occasion = Occasion::findOrFail($id);
-        $cocktailsSlug = explode(',', $occasion->cocktails);
-        foreach ($cocktailsSlug as $slug) {
-            $cocktails[] = Recipe::findOrFail($slug);
+        $occasion = Occasion::where('slug', $id)->first();
+        $cocktailsSlug = $occasion->cocktails ? explode(',', $occasion->cocktails) : [];
+        $cocktails = [];
+        if (!empty($cocktailsSlug)) {
+            foreach ($cocktailsSlug as $slug) {
+                $cocktails[] = Recipe::where('slug', $slug)->first();
+            }
         }
 
         return view('occasions.show', [
-            'occasion' => Occasion::findOrFail($id),
+            'occasion' => $occasion,
             'cocktails' => $cocktails,
         ]);
     }
@@ -65,9 +68,10 @@ class OccasionController extends Controller
      */
     public function edit(string $id): View
     {
+        $occasion = Occasion::where('slug', $id);
         return view('occasions.edit', [
-            'occasion' => Occasion::findOrFail($id),
-            'cocktails' => Occasion::where('slug', $id)->pluck('cocktails')->first(),
+            'occasion' => $occasion,
+            'cocktails' =>$occasion->pluck('cocktails')->first(),
         ]);
     }
 

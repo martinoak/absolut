@@ -1,10 +1,12 @@
 {layout '../layout.latte'}
 
 {block content}
+    {var $loggedIn = Illuminate\Support\Facades\Auth::check()}
     <div class="container mx-auto" id="app">
         <div class="w-full mx-auto">
-            <div class="flex items-center justify-center mx-4">
+            <div class="flex items-center {if $loggedIn}justify-between{else}justify-center{/if} mx-4">
                 <h1 class="text-5xl text-center my-4">{$occasion->name}</h1>
+                <a n:if="$loggedIn" href="{route('occasions.edit', [occasion => $occasion->slug])}"><i class="fa-solid fa-edit fa-xl"></i></a>
             </div>
 
             {foreach $cocktails as $cocktail}

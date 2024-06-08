@@ -68,10 +68,11 @@ class OccasionController extends Controller
      */
     public function edit(string $id): View
     {
-        $occasion = Occasion::where('slug', $id);
+        $occasion = Occasion::where('slug', $id)->first();
+
         return view('occasions.edit', [
             'occasion' => $occasion,
-            'cocktails' =>$occasion->pluck('cocktails')->first(),
+            'cocktails' =>$occasion->pluck('cocktails')->toArray(),
         ]);
     }
 

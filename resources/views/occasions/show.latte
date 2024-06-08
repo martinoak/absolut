@@ -2,11 +2,9 @@
 
 {block content}
     <div class="container mx-auto" id="app">
-        {include '../mixology/nav.latte'}
-
         <div class="w-full mx-auto">
             <div class="flex items-center justify-center mx-4">
-                <h1 class="text-3xl text-center my-4">{$occasion->name}</h1>
+                <h1 class="text-5xl text-center my-4">{$occasion->name}</h1>
             </div>
 
             {foreach $cocktails as $cocktail}

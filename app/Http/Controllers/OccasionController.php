@@ -4,34 +4,26 @@ namespace App\Http\Controllers;
 
 use App\Models\Occasion;
 use App\Models\Recipe;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\View\View;
 
 class OccasionController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index(): View
     {
-        return view('occasions.index', [
+        return view('admin.occasions.index', [
             'occasions' => Occasion::all(),
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function create(): View
     {
-        return view('occasions.create');
+        return view('admin.occasions.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
         $slug = Str::slug($request->input('name'));
 
@@ -40,12 +32,9 @@ class OccasionController extends Controller
             'name' => $request->input('name'),
         ]);
 
-        return to_route('occasions.index');
+        return to_route('admin.occasions.index');
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(string $id): View
     {
         $occasion = Occasion::where('slug', $id)->first();
@@ -57,15 +46,12 @@ class OccasionController extends Controller
             }
         }
 
-        return view('occasions.show', [
+        return view('occasion', [
             'occasion' => $occasion,
             'cocktails' => $cocktails,
         ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id): View
     {
         $occasion = Occasion::where('slug', $id)->first();
@@ -76,17 +62,11 @@ class OccasionController extends Controller
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
         //

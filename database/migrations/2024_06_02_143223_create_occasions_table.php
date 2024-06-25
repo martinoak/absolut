@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('occasions', function (Blueprint $table) {
             $table->string('slug', 100)->primary();
+            $table->string('preview_image', 255)->default('images/preview.jpg');
             $table->string('name', 100);
             $table->text('cocktails')->nullable();
             $table->timestamps();

@@ -1,8 +1,8 @@
-{layout '../layout.latte'}
+{layout '../../layout.latte'}
 
 {block content}
     <div class="container mx-auto">
-        {include '../mixology/nav.latte'}
+        {include '../../mixology/nav.latte'}
 
         <form method="post" action="{route('occasions.store')}" class="max-w-sm mx-auto mt-4">
             {csrf_field()|noescape}

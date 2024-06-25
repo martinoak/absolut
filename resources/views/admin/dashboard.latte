@@ -14,35 +14,49 @@
     </nav>
 
     <div class="p-4 sm:ml-64">
-        <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50">
+        <div class="w-full flex flex-col items-center justify-center rounded shadow-md h-48">
             <p class="text-5xl text-gray-600 font-bold">
                 {$total|number:0,',',' '} Kč
             </p>
         </div>
         <div class="grid grid-cols-2 gap-4 mb-4">
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28">
-                <p class="text-2xl text-gray-400 dark:text-gray-500">
-                    <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-                    </svg>
+            <div class="w-full flex flex-col items-center justify-center rounded shadow-xl p-4">
+                <p class="text-2xl text-gray-800 font-bold mt-4">
+                    Nejdražší lahev
                 </p>
+                <ul class="w-3/4">
+                   {foreach DB::table('bottles')->orderBy('price', 'desc')->limit(1)->get() as $bottle}
+                        <li class="flex justify-between items-center">
+                            <img src="data:image/jpeg;base64,{$bottle->image|noescape}" class="h-24">
+                            <p>{$bottle->name}</p>
+                            <p class="font-bold text-2xl">{$bottle->price|number:0,', ',' '} Kč</p>
+                        </li>
+                    {/foreach}
+                </ul>
             </div>
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28">
-                <p class="text-2xl text-gray-400 dark:text-gray-500">
+            <div class="w-full flex flex-col items-center justify-center rounded shadow-xl p-4">
+                <p class="text-2xl text-gray-800 font-bold">
+                    Nejvzácnější lahev
+                </p>
+                <ul class="w-3/4">
+                    {foreach DB::table('bottles')->where('totalAmount', '>', 0)->orderBy('totalAmount')->limit(1)->get() as $bottle}
+                        <li class="flex justify-between items-center">
+                            <img src="data:image/jpeg;base64,{$bottle->image|noescape}" class="h-24" alt="">
+                            <p>{$bottle->name}</p>
+                            <p>1/<span class="font-bold text-2xl ms-1">{$bottle->totalAmount} ks</span></p>
+                        </li>
+                    {/foreach}
+                </ul>
+            </div>
+            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+                <p class="text-2xl text-gray-400">
                     <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
                     </svg>
                 </p>
             </div>
             <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                <p class="text-2xl text-gray-400 dark:text-gray-500">
-                    <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-                    </svg>
-                </p>
-            </div>
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                <p class="text-2xl text-gray-400 dark:text-gray-500">
+                <p class="text-2xl text-gray-400">
                     <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
                     </svg>
@@ -50,7 +64,7 @@
             </div>
         </div>
         <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
+            <p class="text-2xl text-gray-400">
                 <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
                 </svg>
@@ -58,14 +72,14 @@
         </div>
         <div class="grid grid-cols-2 gap-4">
             <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                <p class="text-2xl text-gray-400 dark:text-gray-500">
+                <p class="text-2xl text-gray-400">
                     <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
                     </svg>
                 </p>
             </div>
             <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                <p class="text-2xl text-gray-400 dark:text-gray-500">
+                <p class="text-2xl text-gray-400">
                     <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
                     </svg>

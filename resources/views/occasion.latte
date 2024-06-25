@@ -1,19 +1,26 @@
-{layout '../layout.latte'}
+{layout 'layout.latte'}
+
+{block head}
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16"></script>
+{/block}
 
 {block content}
     {var $loggedIn = Illuminate\Support\Facades\Auth::check()}
     <div class="container mx-auto" id="app">
-        <div class="w-full mx-auto">
+        <div class="w-full">
             <div class="flex items-center {if $loggedIn}justify-between{else}justify-center{/if} mx-4">
                 <h1 class="text-5xl text-center my-4">{$occasion->name}</h1>
-                <a n:if="$loggedIn" href="{route('occasions.edit', [occasion => $occasion->slug])}"><i class="fa-solid fa-edit fa-xl"></i></a>
+                <div class="flex items-center gap-4">
+                    <button n:if="$loggedIn" v-on:click="copyCurrentUrl"><i class="fa-solid fa-link fa-xl"></i></button>
+                    <a n:if="request()->boolean('allow_edit')" href="{route('occasions.edit', [occasion => $occasion->handle])}"><i class="fa-solid fa-edit fa-xl"></i></a>
+                </div>
             </div>
 
             {foreach $cocktails as $cocktail}
                 <a href="{route('mixology.show', [mixology => $cocktail->slug])}">
                     <div id="recipes" class="recipesAll w-[90%] bg-white border border-gray-200 rounded-lg mx-auto my-2">
                         <div class="preview">
-                            <img src="{$cocktail->image}">
+                            <img src="{$cocktail->image}" alt="">
                         </div>
                         <div class="p-2">
                             <div class="flex justify-center items-center">
@@ -26,4 +33,17 @@
             {/foreach}
         </div>
     </div>
+{/block}
+
+{block bottomscripts}
+    <script>
+        new Vue({
+            el: '#app',
+            methods: {
+                copyCurrentUrl: function () {
+                    navigator.clipboard.writeText(window.location.href+'?allow_edit=1');
+                }
+            }
+        });
+    </script>
 {/block}

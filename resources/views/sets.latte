@@ -9,9 +9,9 @@
             <div class="p-4">
                 <h2 class="text-2xl text-center">{$set}</h2>
                 <hr class="border-t-2 border-[#0048ba] my-2 w-full">
-                <div class="flex flex-wrap justify-between">
+                <div class="flex flex-wrap justify-evenly">
                     {foreach $bottles as $bottle}
-                        <div class="w-full sm:w-1/2 md:w-1/10">
+                        <div class="w-full sm:w-1/2 md:w-[10%]">
                             <a href="{route('bottles.show', [bottle => $bottle->handle])}" class="flex justify-center items-center">
                                 <img src="data:image/jpeg;base64,{$bottle->image|noescape}" alt="" class="w-40 object-cover rounded-lg">
                             </a>

@@ -4,8 +4,9 @@
     <div class="container mx-auto">
         {include 'nav.latte'}
 
-        {foreach App\Models\Bottle::all()->groupBy('set')->sortBy('set') as $set => $bottles}
+        {foreach App\Models\Bottle::all()->groupBy('set') as $set => $bottles}
             {continueIf !$set}
+            {php $bottles = $bottles->sortBy('name')}
             <div class="p-4">
                 <h2 class="text-2xl text-center">{$set}</h2>
                 <hr class="border-t-2 border-[#0048ba] my-2 w-full">

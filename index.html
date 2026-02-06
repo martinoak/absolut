@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABSOLUTMARTIN - Absolut Vodka Collection</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: 'Absolut';
+            src: url('fonts/absolut-regular.ttf') format('truetype');
+            font-weight: 400;
+        }
+        @font-face {
+            font-family: 'Absolut';
+            src: url('fonts/absolut-medium.ttf') format('truetype');
+            font-weight: 500;
+        }
+        @font-face {
+            font-family: 'Absolut';
+            src: url('fonts/absolut-bold.ttf') format('truetype');
+            font-weight: 700;
+        }
+        @font-face {
+            font-family: 'AbsolutHeadline';
+            src: url('fonts/absolut-headline.ttf') format('truetype');
+        }
+        body {
+            font-family: 'Absolut', sans-serif;
+            background-color: #f5f0eb;
+        }
+        .bottle-card {
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .bottle-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+        .bottle-card:hover .bottle-name {
+            color: #1a1a1a;
+        }
+        .bottle-img {
+            aspect-ratio: 2/3;
+            object-fit: contain;
+        }
+        .modal-overlay {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .modal-content {
+            transform: translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .modal-overlay.active .modal-content {
+            transform: translateY(0);
+        }
+        .gold-accent { color: #b8860b; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col text-zinc-800">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-zinc-200/60">
+        <div class="max-w-[1920px] mx-auto px-6 py-5 flex items-center justify-between">
+            <div>
+                <h1 class="text-2xl md:text-3xl font-bold tracking-[0.1em] uppercase text-zinc-900" style="font-family: 'AbsolutHeadline', sans-serif">ABSOLUT<span class="gold-accent">MARTIN</span></h1>
+                <p class="text-[10px] tracking-[0.2em] uppercase text-zinc-400 mt-0.5">Private Collection</p>
+            </div>
+            <span id="bottle-count" class="text-sm text-zinc-400 tracking-widest uppercase"></span>
+        </div>
+    </header>
+
+    <!-- Main Grid -->
+    <main class="flex-1 max-w-[1920px] mx-auto w-full px-3 md:px-6 py-8">
+        <div id="collection" class="grid grid-cols-2 md:grid-cols-6 xl:grid-cols-12 gap-3 md:gap-4">
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4" onclick="closeModal()">
+        <div class="modal-content bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto shadow-2xl" onclick="event.stopPropagation()">
+            <div class="flex items-center justify-between p-5 border-b border-zinc-100">
+                <span class="text-3xl font-bold tracking-[0.1em]" style="font-family: 'AbsolutHeadline', sans-serif">ABSOLUT<span class="gold-accent">MARTIN</span></span>
+                <button onclick="closeModal()" class="w-8 h-8 rounded-full bg-zinc-100 hover:bg-zinc-200 flex items-center justify-center text-zinc-500 hover:text-zinc-800 transition-colors">&times;</button>
+            </div>
+            <div id="modal-body" class="p-5 md:p-8">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-200/60 bg-white/60">
+        <div class="max-w-[1920px] mx-auto px-6 py-5 text-center text-zinc-400 text-xs tracking-widest uppercase">
+            &copy; <span id="year"></span> ABSOLUTMARTIN
+        </div>
+    </footer>
+
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script src="database.js"></script>
+</body>
+</html>
+

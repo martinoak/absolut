@@ -20,6 +20,16 @@ const bottleData = [
         "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2022/08/100_21.jpg"
     },
     {
+        "name": "100 Selfridges",
+        "filter": "Second Skin",
+        "since": 2009,
+        "distribution": "UK",
+        "numberOfBottles": "5 000",
+        "designer": "Peter Jensen",
+        "description": "Limited edition skin released to celebrate the centenary of the English shop Selfridges.",
+        "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/11/selfridge.jpg"
+    },
+    {
         "name": "72 Bian 变",
         "filter": "Limited Edition",
         "since": 2010,
@@ -70,6 +80,16 @@ const bottleData = [
         "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/01/america2_1000.jpg"
     },
     {
+        "name": "Apple 2014",
+        "filter": "Standard & Flavours",
+        "since": 2014,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "Launched in 2014. Red apple and ginger flavour. Replaced Orient Apple.",
+        "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/12/apple12.jpg"
+    },
+    {
         "name": "Be The Thunder",
         "filter": "Second Skin",
         "since": 2019,
@@ -98,6 +118,16 @@ const bottleData = [
         "designer": "Zhivago Duncan",
         "description": "The Fernsehturm TV tower, a relic of a once divided city, stands over the city of Berlin. In the nearly 25 years since East and West Berlin unified, this icon which once represented a controlled message of a dismantled government, now stands for a city defined by artistic freedom and creative discovery.",
         "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/01/berlin.jpg"
+    },
+    {
+        "name": "Berri Acai 2017",
+        "filter": "Standard & Flavours",
+        "since": 2017,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "Same graphic as Absolut Berri Açai 2014. Third medallion version and logo without Country of Sweden.",
+        "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/12/berri-acai-3.jpg"
     },
     {
         "name": "Blank #1 (Mario Wagner)",
@@ -239,8 +269,8 @@ const bottleData = [
         "description": "Absolut Cilantro is a contemporary flavored vodka alive with aromatic cilantro and vibrant lime. Taking its inspiration from Latin American kitchens, it bursts onto the scene with a taste that's smooth, fresh and unforgettable.",
         "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/12/cilantro-1.jpg"
     },
-    /*{
-        "name": "Citron (2021 Design)",
+    {
+        "name": "Citron 2021",
         "filter": "Standard & Flavours",
         "since": 2021,
         "distribution": "Worldwide",
@@ -248,8 +278,18 @@ const bottleData = [
         "designer": "",
         "description": "2021 version of Absolut Citron. Lemon-flavored vodka with the new minimal bottle design.",
         "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/02/absolut-citron-2022.jpg"
-    },*/
-    /*{
+    },
+    {
+        "name": "Colors #2",
+        "filter": "Limited Edition",
+        "since": 2015,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Unknown",
+        "designer": "",
+        "description": "Absolut Colors #2 is similar to the first version with white text and medallion on it. Text is different.",
+        "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/01/colors2.jpg"
+    },
+    {
         "name": "Comeback",
         "filter": "Limited Edition",
         "since": 2019,
@@ -258,7 +298,7 @@ const bottleData = [
         "designer": "",
         "description": "End of the year limited edition bottle for 2019. The meaning behind the broken glass is about recycling and sustenability. The bottle is made from more than 41% recycled glass, like all Absolut bottles. Sustainability has been part of Absolut’s mission for many years and it is striving for a more circular world in which resources are reused again and again to benefit local economies, communities and ecosystems.",
         "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/01/comeback1000.jpg.webp"
-    },*/
+    },
     {
         "name": "Denim",
         "filter": "Second Skin",
@@ -390,6 +430,16 @@ const bottleData = [
         "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/01/exposure3.jpg"
     },
     {
+        "name": "Facet",
+        "filter": "Limited Edition",
+        "since": 2012,
+        "distribution": "Worldwide",
+        "numberOfBottles": "2 500 000",
+        "designer": "",
+        "description": "End of the year 2016 Limited Edition, Absolut Facet is a blue bottle featuring an asymmetrical design.",
+        "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/01/facet750.jpg"
+    },
+    {
         "name": "Flavor Of The Tropics",
         "filter": "Limited Edition",
         "since": 2009,
@@ -410,6 +460,16 @@ const bottleData = [
         "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2024/04/absolut_gift_700.jpg.webp"
     },
     {
+        "name": "Gilbert Baker",
+        "filter": "Limited Edition",
+        "since": 2020,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "The bottle pays homage to American artist and gay rights activist, Gilbert Baker, with a newly designed bottle co-created with The Gilbert Baker Foundation.",
+        "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/11/gilbert-backer-750.jpg"
+    },
+    {
         "name": "Glimmer",
         "filter": "Limited Edition",
         "since": 2010,
@@ -428,6 +488,16 @@ const bottleData = [
         "designer": "",
         "description": "Absolut Gräpe is incredibly easy to mix and is made from all-natural ingredients and contains no sugar. The combination of white grape, dragon fruit and papaya makes it multi-dimensional.",
         "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/12/grape1.jpg"
+    },
+    {
+        "name": "Gräpevine",
+        "filter": "Standard & Flavours",
+        "since": 2011,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "Launched in 2011. White grape, dragon fruit and papaya flavour.",
+        "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/12/grapevine.jpg"
     },
     {
         "name": "Greensaver",
@@ -550,6 +620,16 @@ const bottleData = [
         "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/01/korea.jpg"
     },
     {
+        "name": "Kurant 2016",
+        "filter": "Standard & Flavours",
+        "since": 2016,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "Third version of Absolut Kurant. Different graphic, and logo without Country of Sweden.",
+        "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/02/kurant3_1000.jpg"
+    },
+    {
         "name": "Life Ball #1",
         "filter": "Limited Edition",
         "since": 2018,
@@ -559,16 +639,16 @@ const bottleData = [
         "description": "Exclusive for the Vienna \"Life-Ball\". A rainbow bottle edition with pink ribbon impossed on the mediallion",
         "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/01/life-ball-1.jpg.webp"
     },
-    /*{
-        "name": "Life Ball #2",
-        "filter": "Limited Edition",
-        "since": 2019,
-        "distribution": "Austria",
-        "numberOfBottles": "Unknown",
+    {
+        "name": "Lime 2021",
+        "filter": "Standard & Flavours",
+        "since": 2021,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
         "designer": "",
-        "description": "Exclusive for the Vienna \"Life-Ball\". A rainbow bottle edition with pink ribbon impossed on the mediallion",
-        "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/01/life-ball-2.jpg.webp"
-    },*/
+        "description": "2021 version of Absolut Lime. Lime-flavored vodka with the new minimal bottle design.",
+        "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2022/08/lime22.jpg"
+    },
     {
         "name": "Lollapalooza #1 Bag",
         "filter": "Paper Wrap",
@@ -609,7 +689,7 @@ const bottleData = [
         "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/01/absolut_los_angeles.jpg.webp"
     },
     {
-        "name": "Mandrin (2021 Design)",
+        "name": "Mandrin 2021",
         "filter": "Standard & Flavours",
         "since": 2021,
         "distribution": "Worldwide",
@@ -617,6 +697,16 @@ const bottleData = [
         "designer": "",
         "description": "2021 version of Absolut Mandrin. Orange and mandarin flavored vodka with the new minimal bottle design.",
         "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2022/08/mandrin2022.jpg"
+    },
+    {
+        "name": "Mango 2017",
+        "filter": "Standard & Flavours",
+        "since": 2017,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "2017 version of Absolut Mango. Mango flavored vodka with the new minimal bottle design.",
+        "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/12/mango4.jpg"
     },
     {
         "name": "Masquerade",
@@ -809,6 +899,36 @@ const bottleData = [
         "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/01/oz.jpg"
     },
     {
+        "name": "Passionfruit 2021",
+        "filter": "Standard & Flavours",
+        "since": 2021,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "Passionfruit flavored vodka with the new minimal bottle design.",
+        "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2022/08/passionfruit22.jpg"
+    },
+    {
+        "name": "Pears 2013",
+        "filter": "Standard & Flavours",
+        "since": 2013,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "Pears flavored vodka. The bottle features a pear on the front label and a pear tree on the back label.",
+        "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/12/pears-2.jpg"
+    },
+    {
+        "name": "Peppar 1986",
+        "filter": "Standard & Flavours",
+        "since": 1986,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "Launched in 1986 Absolut Peppar was the first flavored vodka in the Absolut family, it was also the first flavored vodka in the world. Flavour of roasted jalapeños, green tomato, dried herbs.",
+        "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/01/absolut-peppar-1986.jpg"
+    },
+    {
         "name": "Polakom",
         "filter": "International Cities & Countries",
         "since": 2011,
@@ -827,6 +947,16 @@ const bottleData = [
         "designer": "",
         "description": "Absolut Rainbow is the new limited edition bottle with LGBT flag colors after Absolut Colors #1, Absolut Colors #2 and Absolut Colors #3.",
         "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/01/rainbow.jpg"
+    },
+    {
+        "name": "Raspberri 2021",
+        "filter": "Standard & Flavours",
+        "since": 2021,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "Raspberry flavored vodka with the new minimal bottle design.",
+        "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2022/08/raspberry22.jpg"
     },
     {
         "name": "RAW",
@@ -889,14 +1019,23 @@ const bottleData = [
         "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/01/san-francisco.jpg"
     },
     {
-        "name": "Selfridge",
-        "filter": "Second Skin",
-        "since": 2009,
-        "distribution": "UK",
-        "numberOfBottles": "5 000",
-        "designer": "Peter Jensen",
-        "description": "Limited edition skin released to celebrate the centenary of the English shop Selfridges.",
-        "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/11/selfridge.jpg"
+        "name": "Sea Cruise #1",
+        "filter": "Limited Edition",
+        "since": 2013,
+        "distribution": "Carribean Sea",
+        "numberOfBottles": "116 000",
+        "description": "Available on select cruise ships in the Caribbean – Royal Caribbean, Carnival, Norwegian Cruise Line.",
+        "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/01/sea-cruise.jpg"
+    },
+    {
+        "name": "Sensations",
+        "filter": "Limited Edition",
+        "since": 2023,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Unknown",
+        "designer": "",
+        "description": "Tropical fruit flavour.",
+        "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2023/05/absolut-sensation.jpg"
     },
     {
         "name": "Sequin",
@@ -1029,6 +1168,16 @@ const bottleData = [
         "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2024/07/absolut_warhol_700.jpg"
     },
     {
+        "name": "Watermelon 2021",
+        "filter": "Standard & Flavours",
+        "since": 2021,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Core release",
+        "designer": "",
+        "description": "2021 version of Absolut Watermelon.",
+        "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2022/08/watermelon22.jpg"
+    },
+    {
         "name": "Watkins",
         "filter": "Limited Edition",
         "since": 2011,
@@ -1039,6 +1188,16 @@ const bottleData = [
         "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/01/watkins.jpg"
     },
     {
+        "name": "Wil Berri 2021",
+        "filter": "Limited Edition",
+        "since": 2021,
+        "distribution": "Worldwide",
+        "numberOfBottles": "Unknown",
+        "designer": "",
+        "description": "Wild Berri flavoured vodka.",
+        "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2024/07/absolut_wild_berri.jpg"
+    },
+    {
         "name": "Wild Tea",
         "filter": "Standard & Flavours",
         "since": 2010,
@@ -1047,6 +1206,16 @@ const bottleData = [
         "designer": "",
         "description": "Absolut Wild Tea is a blend of vodka with elderflower and black tea flavors. A unique and refreshing taste experience.",
         "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/12/wild-tea-1-1.jpg.webp"
+    },
+    {
+        "name": "World",
+        "filter": "Limited Edition",
+        "since": 2018,
+        "distribution": "Worldwide in DFS",
+        "numberOfBottles": "Unknown",
+        "designer": "",
+        "description": "Limited edition bottle exclusively for travelers. Absolut World has been designed in collaboration with Swedish Illustrator Kari Modén, known for her characteristically decorative, colorful and joyous style. The design is an expression of celebrating global unity and the values that unite people around the world: love, peace and togetherness.",
+        "frontPhoto": "https://absolutpedia.com/wp-content/uploads/2020/01/peace_for_all.jpg"
     }
 ];
 
